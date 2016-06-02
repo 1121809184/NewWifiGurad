@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/more_dialog_bg">
+
+    <ImageView
+        android:id="@+id/iv_more_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="@dimen/common_padding_less"
+        android:paddingLeft="@dimen/common_padding_less"
+        android:paddingRight="@dimen/common_padding_less"
+        android:paddingTop="@dimen/common_padding_less"
+        android:src="@drawable/more_close_icon_1080p" />
+
+    <TextView
+        android:id="@+id/tv_more_add_shop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_more_icon"
+        android:clickable="true"
+        android:padding="@dimen/common_padding_more"
+        android:text="@string/dialog_more_add_new_shop"
+        android:textColor="@color/more_dialog_text_color"
+        android:textSize="@dimen/text_small" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_less"
+        android:layout_below="@+id/tv_more_add_shop"
+        android:layout_marginLeft="@dimen/common_padding_more"
+        android:layout_marginRight="@dimen/common_padding_more"
+        android:background="@color/more_dialog_split" />
+
+    <TextView
+        android:id="@+id/tv_more_log_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:clickable="true"
+        android:padding="@dimen/common_padding_more"
+        android:text="@string/dialog_more_exit"
+        android:textColor="@color/more_dialog_text_color"
+        android:textSize="@dimen/text_small" />
+</RelativeLayout>

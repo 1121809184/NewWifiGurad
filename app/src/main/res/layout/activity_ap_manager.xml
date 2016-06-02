@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/common_padding_less"
+            android:text="管理WiFi："
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/tv_ap_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_padding_less"
+            android:layout_marginRight="@dimen/common_padding_less"
+            android:layout_marginTop="@dimen/common_padding_less"
+            android:background="@drawable/ap_name_shape"
+            android:ellipsize="end"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:text="Hotel Free Wifi"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/tv_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/verify_center_text_color" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_ap_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ap_des_text_bg"
+        android:gravity="left|top"
+        android:hint="添加描述（热点的具体范围）"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:padding="5dp"
+        android:textColor="@color/add_shop_text"
+        android:textColorHint="@color/add_shop_text_hint_color"
+        android:textSize="@dimen/text_small" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_ap_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_button_margin_bot_top"
+            android:layout_marginLeft="@dimen/common_button_margin_left_right"
+            android:layout_marginRight="@dimen/common_button_margin_left_right"
+            android:layout_marginTop="@dimen/common_padding_more"
+            android:layout_weight="1"
+            android:background="@drawable/button_shop_manager_delete_bg"
+            android:paddingBottom="@dimen/common_button_padding_bot_top"
+            android:paddingTop="@dimen/common_button_padding_bot_top"
+            android:text="删除该热点"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small" />
+
+        <Button
+            android:id="@+id/btn_ap_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_button_margin_bot_top"
+            android:layout_marginLeft="@dimen/common_button_margin_left_right"
+            android:layout_marginRight="@dimen/common_button_margin_left_right"
+            android:layout_marginTop="@dimen/common_padding_more"
+            android:layout_weight="1"
+            android:background="@drawable/button_ap_manager_save_bg"
+            android:paddingBottom="@dimen/common_button_padding_bot_top"
+            android:paddingTop="@dimen/common_button_padding_bot_top"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small" />
+    </LinearLayout>
+</LinearLayout>

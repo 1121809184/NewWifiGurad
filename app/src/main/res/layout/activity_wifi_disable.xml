@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background_holo_light"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_no_shop_logo_m_t"
+            android:src="@drawable/icon_wifi_off"/>
+
+        <TextView
+            android:id="@+id/tv_notice_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_photo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_no_shop_text_m_t"
+            android:text="@string/activity_no_wifi_notice_1"
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/text_medium"/>
+
+        <TextView
+            android:id="@+id/tv_notice_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_notice_one"
+            android:layout_centerHorizontal="true"
+            android:text="@string/activity_no_wifi_notice_2"
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/text_medium"/>
+
+        <Button
+            android:id="@+id/btn_open_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_notice_two"
+            android:layout_marginLeft="@dimen/common_button_margin_left_right"
+            android:layout_marginRight="@dimen/common_button_margin_left_right"
+            android:layout_marginTop="@dimen/activity_no_shop_btn_m_t"
+            android:background="@drawable/button_now_register_shop_bg"
+            android:paddingBottom="@dimen/common_button_padding_bot_top"
+            android:paddingTop="@dimen/common_button_padding_bot_top"
+            android:text="@string/activity_no_wifi_button"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"/>
+    </RelativeLayout>
+</LinearLayout>

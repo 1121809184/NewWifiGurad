@@ -1,0 +1,178 @@
+package com.sharedream.wifiguard.conf;
+
+import com.sharedream.wifiguard.utils.EncryptionModule;
+
+public class Constant {
+    public static final String SYS_ENCODING = "UTF-8";
+    public static final int BUFFER_LENGTH = 1024 * 8;
+    public final static String SHARE_DREAM_WIFI_SDK_TOKEN = "0f49eab298df328e48f80924a82479db";
+    public final static int AP_SECURITY_OPEN = 0;
+    public final static int AP_SECURITY_WEP = 1;
+    public final static int AP_SECURITY_WPA = 2;
+    public final static int AP_SECURITY_WPA2 = 3;
+    public static final int LOGIN_MODE_WX = 0x10;
+    public static final int LOGIN_MODE_WB = 0x11;
+    public static final int LOGIN_MODE_QQ = 0x12;
+    public static final int LOGIN_MODE_MB = 0x13;
+    public static final String SMS_SDK_APP_KEY = "fa5231093dc0";
+    public static final String SMS_SDK_APP_SECRET = "4bd056564bbd63adfbf386135a441331";
+    public static final String COUNTRY_CODE = "86";
+    public static final String SMS_SDK_COUNTRY = "country";
+    public static final String SMS_SDK_PHONE = "phone";
+
+    public static final String WX_APP_ID = "wx0a5a27dc77e13505";
+    public static final String WX_APP_SECRET = "fc4a7b282deee026a882a203acc51651";
+    public static final String QQ_SDK_APP_ID = "1105198268";
+    public static final String WEIBO_APP_KEY = "3553484274";
+    public static final String WEIBO_REDIRECT_URL = "https://api.weibo.com/oauth2/default.html";
+    public static final String WEIBO_SCOPE =
+            "email,direct_messages_read,direct_messages_write,"
+                    + "friendships_groups_read,friendships_groups_write,statuses_to_me_read,"
+                    + "follow_app_official_microblog," + "invitation_write";
+
+    public final static String TOKEN = "089effc042b7f3620642ced21e4845e7";
+    public static final int SERVER_SUCCESS_CODE = 100;
+    public static final int SERVER_ERROR_CODE = -99;
+    public static final int HTTP_SUCCESS_CODE = 200;
+    public static final int RESULT_CODE_PICK_IMAGE = 99;
+    public static final int REQUEST_CODE_WIFI_DETAIL = 98;
+    public static final int REQUEST_CODE_BINGDING_WIFI = 97;
+    public static final int REQUEST_CODE_INPUTPWD = 96;
+    public static final int REQUEST_CODE_ADD_SHOP = 95;
+
+    public static final byte[] URL_SERVER = {-74, -72, -70, -99, 50, -72, -97, -68, 53, -106, 30, 63, 58, -67, -68, -74, -73, 63, 63, 27, -104, 61, 48, 21, 116}; // http://air.clickwifi.net/
+    public static final String URL_CMD_MERCHANT_LIST = EncryptionModule.decodeBytesToString(URL_SERVER) + "business/near";
+    public static final String URL_CMD_MERCHANT_CATEGORY = EncryptionModule.decodeBytesToString(URL_SERVER) + "business/category";
+    public static final String URL_CMD_ADD_SHOP = EncryptionModule.decodeBytesToString(URL_SERVER) + "business/addShop";
+    public static final String URL_CMD_BUSINESS_CHECK_AP = EncryptionModule.decodeBytesToString(URL_SERVER) + "business/checkAp";
+    public static final String URL_CMD_RELEVANCE_MERCHANT_AP = EncryptionModule.decodeBytesToString(URL_SERVER) + "business/ap2shop";
+    public static final String URL_CMD_MY_SHOP = EncryptionModule.decodeBytesToString(URL_SERVER) + "business/myshop";
+    public static final String URL_CMD_DELETE_SHOP = EncryptionModule.decodeBytesToString(URL_SERVER) + "business/deleteShop";
+    public static final String URL_CMD_UPDATE_SHOP = EncryptionModule.decodeBytesToString(URL_SERVER) + "business/updateShop";
+    public static final String URL_CMD_DELETE_AP = EncryptionModule.decodeBytesToString(URL_SERVER) + "business/deleteAp";
+    public static final String URL_CMD_UPDATE_AP = EncryptionModule.decodeBytesToString(URL_SERVER) + "business/updateAp";
+    public static final String URL_CMD_SERVER = EncryptionModule.decodeBytesToString(URL_SERVER);
+
+    public static final String SP_KEY_ACCESS_KEY = "accessKey";
+    public static final String SP_KEY_ACCESS_USER_ID = "phone";
+    public static final String SP_KEY_ACCESS_PASSWORD = "pwd";
+    public static final String SP_KEY_ACCESS_TOKEN = "accessToken";
+    public static final String SP_KEY_THIRD_LOGIN_UID = "loginUid";
+    public static final String SP_KEY_LOC_LNG = "bdlongitude";
+    public static final String SP_KEY_LOC_LAT = "bdlatitude";
+    public static final String SP_KEY_LOC_RADIUS = "bdradius";
+    public static final String SP_KEY_LOC_CITY_ID = "bdcityid";
+    public static final String SP_KEY_LOC_ADDRESS = "bdaddress";
+    public static final String SP_KEY_LOC_PROVINCE = "bdprovince";
+    public static final String SP_KEY_LOC_CITY = "bdcity";
+    public static final String SP_KEY_LOC_DISTRICT = "bddistrict";
+    public static final String SP_KEY_LOC_STREET = "bdstreet";
+    public static final String SP_KEY_LOC_STREET_NUMBER = "bdstreetnumber";
+    public static final String SP_KEY_MAP_ADDRESS = "baiduAddress";
+    public static final String SP_KEY_FIRST_LAUNCH = "firstLaunch";
+    public static final String SP_KEY_MORE_ADD_SHOP = "moreAddShop";
+    public static final String SP_KEY_NO_SHOPS_ADD = "noShopsAdd";
+    public static final String SP_KEY_FROM_LAUNCH_REGISTER = "fromLaunchRegister";
+    public static final String SP_KEY_SAVE_TO_DB = "saveToSQLite";
+    public static final String SP_KEY_SMALL_CATEGORY_ID = "smallCategoryId";
+    public static final String SP_KEY_SHOP_ID = "shopId";
+    public static final String SP_KEY_SHOP_PLACE = "shopPlace";
+    public static final String SP_KEY_AP_ID = "apId";
+    public static final String SP_KEY_ADD_AP = "addAp";
+
+    public static final String BUNDLE_KEY_LOC_PROVINCE = "province";
+    public static final String BUNDLE_KEY_LOC_CITY = "city";
+    public static final String BUNDLE_KEY_LOC_DISTRICT = "district";
+    public static final String BUNDLE_KEY_LOC_STREET = "street";
+    public static final String BUNDLE_KEY_LOC_STREET_NUMBER = "streetNumber";
+    public static final String BUNDLE_KEY_LNG = "lng";
+    public static final String BUNDLE_KEY_LAT = "lat";
+    public static final String BUNDLE_KEY_SSID = "ssid";
+    public static final String BUNDLE_KEY_BSSID = "bssid";
+    public static final String BUNDLE_KEY_PWD = "pwd";
+    public static final String BUNDLE_KEY_SECURITY = "security";
+    public static final String BUNDLE_KEY_LEVEL = "level";
+    public static final String BUNDLE_KEY_FREQUENCY = "frequency";
+    public static final String BUNDLE_KEY_AP_ID = "apId";
+    public static final String BUNDLE_KEY_NETWORK_ID = "networkId";
+    public static final String BUNDLE_KEY_SHOP_LIST = "shopList";
+    public static final String BUNDLE_KEY_SHOP_NAME = "shopName";
+    public static final String BUNDLE_KEY_SHOP_PHONE = "shopPhone";
+    public static final String BUNDLE_KEY_SHOP_CATEGORY = "shopCategory";
+    public static final String BUNDLE_KEY_MY_SHOP = "myShop";
+    public static final String BUNDLE_KEY_LEVEL_TIPS = "levelTips";
+    public static final String BUNDLE_KEY_MY_AP = "myAp";
+    public static final String INTENT_KEY_AP_LIST = "apList";
+    public static final String INTENT_KEY_LOGIN = "mylogin";
+    public static final String INTENT_KEY_WIFI_DISABLE_TO = "wantToDo";
+    public static final String INTENT_KEY_NEW_PASSWORD = "newPassword";
+    public static final String INTENT_KEY_NEW_PHONE = "newPhone";
+    public static final String OPEN_POLICE_ACTIVITY = "PoliceActivity";
+    public static final String OPEN_SCAN_WIFI_ACTIVITY = "ScanWifiActivity";
+    public static final String OPEN_SAFE_CHECK_ACTIVITY = "SafeCheckActivity";
+    public static final String OPEN_WIFI_SPEED_ACTIVITY = "WifiSpeedActivity";
+    public static final String OPEN_OPTIMIZE_WIFI_ACTIVITY = "OptimizeWifiActivity";
+
+    public static final String BUNDLE_KEY_DIALOG_INFO = "dialogInfo";
+    public static final String BUNDLE_KEY_WIFI_LIST = "wifiList";
+    public static final String BUNDLE_KEY_SHOW_DURATION_TIME_ATFER_FINISH_ALL = "showDurationTimeAfterFinishAll";
+    public static final String BUNDLE_KEY_CHECK_PASSWORD_ONLY = "checkPasswordOnly";
+    public static final String BUNDLE_KEY_INDEX = "sizeOfLayout";
+    public static final String BUNDLE_KEY_OK_NETWORK_ID = "okNetworkId";
+    public static final String BUNDLE_KEY_WIFI_EXCEPTION_RESULT = "wifiCheckResult";
+    public static final int WIFI_PASSWORD_TYPE_OPEN = 0;
+    public static final int WIFI_PASSWORD_TYPE_WEP = 1;
+    public static final int WIFI_PASSWORD_TYPE_WPA = 2;
+    public static final int WIFI_PASSWORD_TYPE_WPA2 = 3;
+    public static final int WIFI_STATUS_UNKNOWN = 0;
+    public static final int WIFI_STATUS_OPEN = 1;
+    public static final int WIFI_STATUS_EXPLOITABLE = 2;
+    public static final int WIFI_STATUS_MAINTAIN = 3;
+    public static final int WIFI_STATUS_VIEW = 4;
+    public static final int WIFI_STATUS_CACHE = 5;
+    public static final String BUNDLE_KEY_SHOW_TIME_BEFORE_CLOSE = "showTimeBeforeClose";
+    public static final String URL_NETWORK_TEST_SERVER = "http://180.150.187.184/tag";
+    public static final int REQUEST_CODE_CHECK_WIFI = 0x0004;
+    public static final byte[] BYTES_URL_NETWORK_TEST_SERVER = {-74, -72, -70, -99, 50, -72, -73, 60, -68, -73, 55, -70, 58, -73, 55, 60, 63, 52, 55, 60, -66, 53, 21, 50, -69, 80}; // http://180.150.187.184/tag;
+
+    //public static final String URL_USER_SERVER = "http://passport.clickwifi.net/";
+    public static final String URL_USER_SERVER = "https://account.clickwifi.net/";
+    public static final String URL_USER_REGISTER = URL_USER_SERVER + "user/register";
+    public static final String URL_USER_LOGIN = URL_USER_SERVER + "user/login";
+    public static final String URL_USER_BINDING = URL_USER_SERVER + "user/bind";
+    public static final String URL_USER_RESET_PASSWORD = URL_USER_SERVER + "user/resetPasswd";
+    public static final String URL_USER_VERIFY_PASSWORD = URL_USER_SERVER + "user/verifyPasswd";
+    public static final int SERVER_USER_SYS_USER_INEXISTENCE = -2;
+    public static final int SERVER_USER_SYS_WRONG_PASSWORD = -3;
+    public static final int SERVER_USER_SYS_ACCOUNT_FROZEN = -4;
+    public static final int SERVER_USER_SYS_BINDING_PHONE = -9;
+    public static final String URL_WS_SERVER = "http://test.ws.clickwifi.net/";
+    public static final String URL_WS_SHOP_CATEGORY = URL_WS_SERVER + "shop/category";
+    public static final String URL_WS_MY_SHOPS = URL_WS_SERVER + "shop/ownership";
+    public static final String URL_WS_LOGIN_STATE = URL_WS_SERVER + "user/redirect";
+    public static final String URL_WS_ADD_SHOP = URL_WS_SERVER + "shop/add";
+    public static final String URL_WS_UPDATE_SHOP = URL_WS_SERVER + "shop/modify";
+    public static final String URL_WS_DELETE_SHOP = URL_WS_SERVER + "shop/del";
+    public static final String URL_WS_GROUP_BELONGS = URL_WS_SERVER + "shop/groupOwnership";
+    public static final String URL_WS_CREATE_TOKEN = URL_WS_SERVER + "shop/createToken";
+    public static final String URL_WS_CHECK_AP = URL_WS_SERVER + "ap/checkAp";
+    public static final String URL_WS_MODIFY_AP = URL_WS_SERVER + "ap/unbind";
+    public static final String URL_WS_ADD_AP = URL_WS_SERVER + "ap/add";
+    public static final String URL_WS_DELETE_AP = URL_WS_SERVER + "ap/del";
+    public static final String URL_WS_ADD_AP_PLACE = URL_WS_SERVER + "ap/modifyApPlace";
+    public static final String URL_WS_CHECK_VERSION = URL_WS_SERVER + "app/checkUpdate";
+
+    public static final String VERSION_APK_DOWNLOAD_FOLDER = "apk";
+    public static final String VERSION_CACHE_IMAGE_FILE_EXT = ".tmp";
+    public static final String VERSION_APK_EXT = ".apk";
+    public static final String VERSION_OS_ANDROID = "ANDROID";
+    public static final int UPDATE_FORCEDLY = 1;
+    public static final int UPDATE_OPTIONAL = 0;
+    public static final int RESULT_STATUS_NOT_NEW_VERSION = 3;
+    public static final String BUNDLE_KEY_DOWNLOAD_TITLE = "downloadTitle";
+    public static final String BUNDLE_KEY_DOWNLOAD_URL = "downloadUrl";
+    public static final String BUNDLE_KEY_FOLDER_PATH = "downloadFolderPath";
+    public static final String BUNDLE_KEY_FILENAME = "downloadFilename";
+    public static final int BUNDLE_KEY_ADD_SHOP = 0;
+    public static final int BUNDLE_KEY_EDIT_SHOP = 1;
+}

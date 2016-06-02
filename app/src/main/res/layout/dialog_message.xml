@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/common_padding_less"
+                android:paddingRight="@dimen/common_padding_less">
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_top_shape"
+        android:paddingBottom="@dimen/common_padding_less"
+        android:paddingLeft="@dimen/common_padding_less"
+        android:paddingTop="@dimen/common_padding_less"
+        android:singleLine="true"
+        android:text="@string/dialog_message_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_smaller"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_dialog_title"
+        android:layout_alignRight="@id/tv_dialog_title"
+        android:layout_below="@id/tv_dialog_title"
+        android:background="@drawable/dialog_bot_shape">
+
+        <TextView
+            android:id="@+id/tv_delete_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dialog_message_margin_top_bot"
+            android:layout_marginLeft="@dimen/common_padding_less"
+            android:layout_marginRight="@dimen/common_padding_less"
+            android:layout_marginTop="@dimen/dialog_message_margin_top_bot"
+            tools:text="@string/dialog_message_content"
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/text_smaller"/>
+
+        <Button
+            android:id="@+id/tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_delete_notice"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="@dimen/common_padding_less"
+            android:layout_marginRight="@dimen/common_padding_less"
+            android:background="@drawable/dialog_button_bg"
+            android:clickable="true"
+            android:padding="@dimen/dialog_message_button_padding"
+            android:text="@string/dialog_message_ok"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/text_smaller"/>
+
+        <Button
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_delete_notice"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@+id/tv_ok"
+            android:background="@drawable/dialog_button_bg"
+            android:clickable="true"
+            android:padding="@dimen/dialog_message_button_padding"
+            android:text="@string/dialog_message_cancel"
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/text_smaller"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/tv_ok"/>
+    </RelativeLayout>
+</RelativeLayout>

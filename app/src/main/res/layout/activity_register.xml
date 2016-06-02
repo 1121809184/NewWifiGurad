@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/theme_color">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_register_logo_magin_top"
+        android:src="@drawable/icon_logo"/>
+
+    <Button
+        android:id="@+id/btn_phone_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_wx_login"
+        android:layout_marginBottom="@dimen/common_button_margin_bot_top"
+        android:layout_marginLeft="@dimen/common_button_margin_left_right"
+        android:layout_marginRight="@dimen/common_button_margin_left_right"
+        android:background="@drawable/button_login_phone_shape"
+        android:paddingBottom="@dimen/common_button_padding_bot_top"
+        android:paddingTop="@dimen/common_button_padding_bot_top"
+        android:text="@string/activity_register_login_phone"
+        android:textColor="@color/theme_color"
+        android:textSize="@dimen/text_small"/>
+
+    <Button
+        android:id="@+id/btn_wx_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_weibo_login"
+        android:layout_marginBottom="@dimen/common_button_margin_bot_top"
+        android:layout_marginLeft="@dimen/common_button_margin_left_right"
+        android:layout_marginRight="@dimen/common_button_margin_left_right"
+        android:background="@drawable/button_login_weixin_shape"
+        android:paddingBottom="@dimen/common_button_padding_bot_top"
+        android:paddingTop="@dimen/common_button_padding_bot_top"
+        android:text="@string/activity_register_login_weixin"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_small"/>
+
+    <Button
+        android:id="@+id/btn_weibo_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_login"
+        android:layout_marginBottom="@dimen/common_button_margin_bot_top"
+        android:layout_marginLeft="@dimen/common_button_margin_left_right"
+        android:layout_marginRight="@dimen/common_button_margin_left_right"
+        android:background="@drawable/button_login_weibo_shape"
+        android:paddingBottom="@dimen/common_button_padding_bot_top"
+        android:paddingTop="@dimen/common_button_padding_bot_top"
+        android:text="@string/activity_register_login_weibo"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_small"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/activity_register_login_margin_bot">
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:paddingBottom="@dimen/activity_register_login_text_padding_bot"
+            android:paddingTop="@dimen/activity_register_login_text_padding_top"
+            android:text="@string/activity_register_login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_smaller"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/split_more"
+            android:layout_alignLeft="@+id/tv_login"
+            android:layout_alignRight="@+id/tv_login"
+            android:layout_below="@+id/tv_login"
+            android:background="@color/white"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/user_key_icon_1080p"/>
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_key"
+            android:layout_alignTop="@+id/iv_key"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_clear"
+            android:layout_toRightOf="@id/iv_key"
+            android:background="@null"
+            android:hint="请输入六位新密码"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/theme_text_color"
+            android:textColorHint="@color/add_shop_text_hint_color"
+            android:textSize="@dimen/text_small"/>
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_key"
+            android:layout_alignTop="@+id/iv_key"
+            android:layout_toLeftOf="@+id/view_split"
+            android:paddingLeft="@dimen/common_padding_more"
+            android:paddingRight="@dimen/common_padding_more"
+            android:src="@drawable/delete_icon_1080p"
+            android:visibility="gone"/>
+        <View
+            android:id="@+id/view_split"
+            android:layout_width="@dimen/split_more"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_key"
+            android:layout_alignTop="@+id/iv_key"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/activity_login_split_m_t_b"
+            android:layout_marginTop="@dimen/activity_login_split_m_t_b"
+            android:layout_toLeftOf="@+id/iv_eye"
+            android:background="@color/background_split"/>
+
+        <ImageView
+            android:id="@+id/iv_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_key"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/iv_key"
+            android:paddingLeft="@dimen/activity_login_eye_p_l"
+            android:paddingRight="@dimen/activity_login_eye_p_r"
+            android:src="@drawable/user_eye_close_con_1080p"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_less"
+            android:layout_below="@+id/iv_key"
+            android:layout_toRightOf="@+id/iv_key"
+            android:background="@color/background_split"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_key_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/user_key_icon_1080p"/>
+
+        <EditText
+            android:id="@+id/et_password_again"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_key_again"
+            android:layout_alignTop="@+id/iv_key_again"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_key_again"
+            android:background="@null"
+            android:hint="请再次输入六位新密码"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/theme_text_color"
+            android:textColorHint="@color/add_shop_text_hint_color"
+            android:textSize="@dimen/text_small"/>
+
+        <View
+            android:id="@+id/view_split_again"
+            android:layout_width="@dimen/split_more"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_key_again"
+            android:layout_alignTop="@+id/iv_key_again"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/activity_login_split_m_t_b"
+            android:layout_marginTop="@dimen/activity_login_split_m_t_b"
+            android:layout_toLeftOf="@+id/iv_eye_again"
+            android:background="@color/background_split"/>
+
+        <ImageView
+            android:id="@+id/iv_eye_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_key_again"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/iv_key_again"
+            android:paddingLeft="@dimen/activity_login_eye_p_l"
+            android:paddingRight="@dimen/activity_login_eye_p_r"
+            android:src="@drawable/user_eye_close_con_1080p"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_less"
+            android:layout_below="@+id/iv_key_again"
+            android:layout_toRightOf="@+id/iv_key_again"
+            android:background="@color/background_split"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_reset_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_button_margin_left_right"
+        android:layout_marginRight="@dimen/common_button_margin_left_right"
+        android:layout_marginTop="@dimen/activity_update_pwd_button_margin_top"
+        android:background="@drawable/button_phone_binding_bg"
+        android:paddingBottom="@dimen/common_button_padding_bot_top"
+        android:paddingTop="@dimen/common_button_padding_bot_top"
+        android:text="@string/activity_phone_button_reset"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_small"/>
+</LinearLayout>

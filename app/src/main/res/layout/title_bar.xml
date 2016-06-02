@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/theme_color"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding_less"
+            android:src="@drawable/back_icon_1080p" />
+
+        <RelativeLayout
+            android:id="@+id/rl_shops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_padding_less"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_my_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Beta V1.1.0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_smallest" />
+
+            <ImageView
+                android:id="@+id/iv_select_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_my_shop"
+                android:padding="@dimen/title_bar_image_padding"
+                android:src="@drawable/push_icon_1080p"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large"
+            tools:text="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/common_padding_less"
+            android:src="@drawable/more_icon_1080p" />
+
+        <TextView
+            android:id="@+id/tv_add_ap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:padding="@dimen/common_padding_less"
+            android:text="@string/title_bar_add_wifi"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_holo_light">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/activity_location_address_m_l_r"
+        android:layout_marginRight="@dimen/activity_location_address_m_l_r"
+        android:layout_marginTop="@dimen/activity_location_address_m_t"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_input_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:focusable="false"
+            android:padding="@dimen/common_padding_less"
+            android:singleLine="true"
+            android:textColor="@color/verify_center_text_color"
+            android:textSize="@dimen/text_small"
+            tools:text="广州海珠区"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_less"
+            android:layout_marginLeft="@dimen/common_padding_more"
+            android:layout_marginRight="@dimen/common_padding_more"
+            android:background="@color/add_shop_split"/>
+
+        <TextView
+            android:id="@+id/tv_use_map_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:padding="@dimen/activity_location_text_use_address"
+            android:text="@string/activity_location_use_address"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/text_small"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_locate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingBottom="@dimen/activity_location_mark_padding_bot"
+        android:src="@drawable/icon_location"/>
+
+    <ImageView
+        android:id="@+id/iv_original_location"
+        android:layout_width="@dimen/activity_location_original_addr_w_h"
+        android:layout_height="@dimen/activity_location_original_addr_w_h"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/activity_location_original_addr_m_b"
+        android:layout_marginLeft="@dimen/activity_location_original_addr_m_r"
+        android:background="@color/white"
+        android:padding="@dimen/activity_location_original_addr_m_r"
+        android:src="@drawable/icon_locate"/>
+</RelativeLayout>

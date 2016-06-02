@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/theme_color"
+                android:clipToPadding="true"
+                android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_padding_more"
+                android:src="@drawable/phone_icon_1080p"/>
+
+            <EditText
+                android:id="@+id/et_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_phone"
+                android:layout_alignTop="@+id/iv_phone"
+                android:layout_centerVertical="true"
+                android:maxLength="11"
+                android:layout_toRightOf="@id/iv_phone"
+                android:background="@null"
+                android:hint="@string/activity_phone_register_hint_phone"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/et_login_hint"
+                android:textSize="@dimen/text_small"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_more"
+            android:layout_marginLeft="@dimen/common_padding_less"
+            android:layout_marginRight="@dimen/common_padding_less"
+            android:background="@color/et_login_split"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_padding_more"
+                android:src="@drawable/key_icon_1080p"/>
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_key"
+                android:layout_alignTop="@+id/iv_key"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_clear"
+                android:layout_toRightOf="@id/iv_key"
+                android:background="@null"
+                android:hint="@string/activity_phone_register_hint_pwd"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/et_login_hint"
+                android:textSize="@dimen/text_small"/>
+
+            <ImageView
+                android:id="@+id/iv_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_key"
+                android:layout_alignTop="@+id/iv_key"
+                android:layout_toLeftOf="@+id/view_split"
+                android:paddingLeft="@dimen/common_padding_more"
+                android:paddingRight="@dimen/common_padding_more"
+                android:src="@drawable/delete_icon_1080p"/>
+
+            <View
+                android:id="@+id/view_split"
+                android:layout_width="@dimen/split_more"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_key"
+                android:layout_alignTop="@+id/iv_key"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/activity_phone_register_split_margin_top_bot"
+                android:layout_marginTop="@dimen/activity_phone_register_split_margin_top_bot"
+                android:layout_toLeftOf="@+id/iv_eye"
+                android:background="@color/et_login_split"/>
+
+            <ImageView
+                android:id="@+id/iv_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_key"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/iv_key"
+                android:paddingLeft="@dimen/activity_phone_register_eye_padding_left"
+                android:paddingRight="@dimen/activity_phone_register_eye_padding_right"
+                android:src="@drawable/eyeclose_icon_1080p"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_more"
+            android:layout_marginLeft="@dimen/common_padding_less"
+            android:layout_marginRight="@dimen/common_padding_less"
+            android:background="@color/et_login_split"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_padding_more"
+                android:src="@drawable/code_icon_1080p"/>
+
+            <EditText
+                android:id="@+id/et_verify_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_code"
+                android:layout_alignTop="@+id/iv_code"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_code"
+                android:background="@null"
+                android:hint="@string/activity_phone_register_hint_code"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/et_login_hint"
+                android:textSize="@dimen/text_small"/>
+
+            <View
+                android:layout_width="@dimen/split_more"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/et_verify_code"
+                android:layout_alignTop="@+id/et_verify_code"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/activity_phone_register_split_margin_top_bot"
+                android:layout_marginTop="@dimen/activity_phone_register_split_margin_top_bot"
+                android:layout_toLeftOf="@+id/iv_time"
+                android:background="@color/et_login_split"/>
+
+            <ImageView
+                android:id="@+id/iv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/et_verify_code"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/et_verify_code"
+                android:paddingLeft="@dimen/activity_phone_register_eye_padding_left"
+                android:paddingRight="@dimen/activity_phone_register_eye_padding_right"
+                android:src="@drawable/eyeopen_icon_1080p"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_send_sms_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/et_verify_code"
+                android:layout_alignLeft="@id/iv_time"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/et_verify_code"
+                android:gravity="center"
+                android:padding="@dimen/activity_phone_register_time_down"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium"
+                tools:text="59s"/>
+
+            <Button
+                android:id="@+id/btn_send_sms_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/iv_time"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/activity_phone_register_btn_get_code_m_r"
+                android:background="@drawable/button_phone_send_sms_bg"
+                android:paddingBottom="@dimen/activity_phone_register_btn_get_code_p_t_b"
+                android:paddingLeft="@dimen/activity_phone_register_btn_get_code_p_r_l"
+                android:paddingRight="@dimen/activity_phone_register_btn_get_code_p_r_l"
+                android:paddingTop="@dimen/activity_phone_register_btn_get_code_p_t_b"
+                android:text="@string/activity_phone_button_register_send_sms_code"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/text_small"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_more"
+            android:layout_marginLeft="@dimen/common_padding_less"
+            android:layout_marginRight="@dimen/common_padding_less"
+            android:background="@color/et_login_split"/>
+
+        <Button
+            android:id="@+id/btn_register_and_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_button_margin_left_right"
+            android:layout_marginRight="@dimen/common_button_margin_left_right"
+            android:layout_marginTop="@dimen/activity_phone_register_btn_m_t"
+            android:background="@drawable/button_phone_register_bg"
+            android:paddingBottom="@dimen/common_button_padding_bot_top"
+            android:paddingTop="@dimen/common_button_padding_bot_top"
+            android:text="@string/activity_phone_button_register"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/text_small"/>
+
+        <LinearLayout
+            android:id="@+id/ll_go_to_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="@dimen/common_padding_less"
+            android:layout_marginRight="@dimen/common_padding_less"
+            android:layout_marginTop="@dimen/common_padding_more"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/split_more"
+                android:text="@string/activity_phone_text_login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_smaller"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_less"
+                android:background="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/split_less"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_padding_less"
+                android:layout_marginRight="@dimen/common_padding_less"
+                android:layout_toLeftOf="@+id/tv_third_login"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/tv_third_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/activity_phone_button_register_split"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_smallest"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/split_less"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_padding_less"
+                android:layout_marginRight="@dimen/common_padding_less"
+                android:layout_toRightOf="@+id/tv_third_login"
+                android:background="@color/white"/>
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_third_login_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_login_rg_m_t_b"
+            android:layout_marginTop="@dimen/activity_login_rg_m_t_b"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_login_weixin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_login_rb_m_l_r"
+                android:layout_marginRight="@dimen/activity_login_rb_m_l_r"
+                android:background="@drawable/radio_button_login_weixin"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/rb_login_weibo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_login_rb_m_l_r"
+                android:layout_marginRight="@dimen/activity_login_rb_m_l_r"
+                android:background="@drawable/radio_button_login_weibo"
+                android:button="@null"/>
+
+            <!--<RadioButton
+                android:id="@+id/rb_login_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_phone_register_rg_m_t_b"
+                android:layout_marginRight="@dimen/activity_phone_register_rg_m_t_b"
+                android:background="@drawable/radio_button_login_qq"
+                android:button="@null"/>-->
+        </RadioGroup>
+    </LinearLayout>
+</RelativeLayout>

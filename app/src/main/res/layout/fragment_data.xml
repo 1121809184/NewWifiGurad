@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/title_bar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_color"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_new_add_guest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_padding_less"
+                android:text="@string/fragment_data_new_person"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_smaller"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/fragment_data_person_padding_bot"
+                android:paddingLeft="@dimen/common_padding_less"
+                android:paddingTop="@dimen/common_padding_less"
+                android:text="@string/fragment_data_new_person_no"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_person_number_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fragment_data_data_margin_bot"
+                android:layout_marginLeft="@dimen/common_padding_less"
+                android:layout_marginTop="@dimen/fragment_data_data_margin_top"
+                android:text="@string/fragment_data_person_number"
+                android:textColor="@color/fragment_data_text_top_color"
+                android:textSize="@dimen/text_smaller"/>
+
+            <TextView
+                android:id="@+id/tv_person_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_person_number_title"
+                android:layout_below="@+id/tv_person_number_title"
+                android:layout_marginBottom="@dimen/fragment_data_number_margin_bot"
+                android:text="235"
+                android:textColor="@color/fragment_data_text_bot_color"
+                android:textSize="@dimen/text_medium"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_less"
+                android:layout_below="@+id/tv_person_number"
+                android:layout_marginLeft="@dimen/common_padding_less"
+                android:layout_marginRight="@dimen/common_padding_less"
+                android:background="@color/fragment_data_split_line"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_total_ups_and_downs_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fragment_data_data_margin_bot"
+                    android:layout_marginLeft="@dimen/common_padding_less"
+                    android:layout_marginTop="@dimen/fragment_data_number_margin_bot"
+                    android:text="@string/fragment_data_total_ups_downs"
+                    android:textColor="@color/fragment_data_text_top_color"
+                    android:textSize="@dimen/text_smaller"/>
+
+                <TextView
+                    android:id="@+id/tv_total_ups_and_downs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_total_ups_and_downs_title"
+                    android:layout_below="@+id/tv_total_ups_and_downs_title"
+                    android:layout_marginBottom="@dimen/fragment_data_number_margin_bot"
+                    android:text="15%"
+                    android:textColor="@color/fragment_data_text_bot_color"
+                    android:textSize="@dimen/text_medium"/>
+
+                <View
+                    android:id="@+id/view_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/split_less"
+                    android:layout_below="@+id/tv_total_ups_and_downs"
+                    android:layout_marginLeft="@dimen/common_padding_less"
+                    android:background="@color/fragment_data_split_line"/>
+
+                <View
+                    android:layout_width="@dimen/split_less"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/view_1"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/fragment_data_split_line"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_yesterday_person_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fragment_data_data_margin_bot"
+                    android:layout_marginLeft="@dimen/common_padding_less"
+                    android:layout_marginTop="@dimen/fragment_data_number_margin_bot"
+                    android:text="@string/fragment_data_yesterday_person_title"
+                    android:textColor="@color/fragment_data_text_top_color"
+                    android:textSize="@dimen/text_smaller"/>
+
+                <TextView
+                    android:id="@+id/tv_yesterday_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_yesterday_person_title"
+                    android:layout_below="@+id/tv_yesterday_person_title"
+                    android:layout_marginBottom="@dimen/fragment_data_number_margin_bot"
+                    android:text="35"
+                    android:textColor="@color/fragment_data_text_bot_color"
+                    android:textSize="@dimen/text_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/split_less"
+                    android:layout_below="@+id/tv_yesterday_person"
+                    android:layout_marginRight="@dimen/common_padding_less"
+                    android:background="@color/fragment_data_split_line"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_new_ups_and_downs_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fragment_data_data_margin_bot"
+                    android:layout_marginLeft="@dimen/common_padding_less"
+                    android:layout_marginTop="@dimen/fragment_data_data_margin_top"
+                    android:text="@string/fragment_data_new_ups_and_downs"
+                    android:textColor="@color/fragment_data_text_top_color"
+                    android:textSize="@dimen/text_smaller"/>
+
+                <TextView
+                    android:id="@+id/tv_new_ups_and_downs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_new_ups_and_downs_title"
+                    android:layout_below="@+id/tv_new_ups_and_downs_title"
+                    android:layout_marginBottom="@dimen/fragment_data_number_margin_bot"
+                    android:text="5%"
+                    android:textColor="@color/fragment_data_text_bot_color"
+                    android:textSize="@dimen/text_medium"/>
+
+                <View
+                    android:id="@+id/view_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/split_less"
+                    android:layout_below="@+id/tv_new_ups_and_downs"
+                    android:layout_marginLeft="@dimen/common_padding_less"
+                    android:background="@color/fragment_data_split_line"/>
+
+                <View
+                    android:layout_width="@dimen/split_less"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/view_2"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/fragment_data_split_line"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_yesterday_add_person_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fragment_data_data_margin_bot"
+                    android:layout_marginLeft="@dimen/common_padding_less"
+                    android:layout_marginTop="@dimen/fragment_data_data_margin_top"
+                    android:text="@string/fragment_data_yesterday_add_person_title"
+                    android:textColor="@color/fragment_data_text_top_color"
+                    android:textSize="@dimen/text_smaller"/>
+
+                <TextView
+                    android:id="@+id/tv_yesterday_add_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_yesterday_add_person_title"
+                    android:layout_below="@+id/tv_yesterday_add_person_title"
+                    android:layout_marginBottom="@dimen/fragment_data_number_margin_bot"
+                    android:text="8"
+                    android:textColor="@color/fragment_data_text_bot_color"
+                    android:textSize="@dimen/text_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/split_less"
+                    android:layout_below="@+id/tv_yesterday_add_person"
+                    android:layout_marginRight="@dimen/common_padding_less"
+                    android:background="@color/fragment_data_split_line"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_total_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/fragment_data_big_padding"
+                android:text="@string/fragment_data_total_title"
+                android:textColor="@color/fragment_data_text_top_color"
+                android:textSize="@dimen/text_medium"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_less"
+                android:layout_below="@+id/tv_total_title"
+                android:layout_marginLeft="@dimen/common_padding_less"
+                android:layout_marginRight="@dimen/common_padding_less"
+                android:background="@color/fragment_data_split_line"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_total_today_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fragment_data_data_margin_bot"
+                    android:layout_marginLeft="@dimen/common_padding_less"
+                    android:layout_marginTop="@dimen/fragment_data_data_margin_top"
+                    android:text="@string/fragment_data_total_today_title"
+                    android:textColor="@color/fragment_data_text_top_color"
+                    android:textSize="@dimen/text_smaller"/>
+
+                <TextView
+                    android:id="@+id/tv_total_today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_total_today_title"
+                    android:layout_below="@+id/tv_total_today_title"
+                    android:layout_marginBottom="@dimen/fragment_data_number_margin_bot"
+                    android:text="395"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/text_medium"/>
+
+                <View
+                    android:id="@+id/view_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/split_less"
+                    android:layout_below="@+id/tv_total_today"
+                    android:layout_marginLeft="@dimen/common_padding_less"
+                    android:background="@color/fragment_data_split_line"/>
+
+                <View
+                    android:layout_width="@dimen/split_less"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/view_3"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/fragment_data_split_line"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_total_yesterday_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fragment_data_data_margin_bot"
+                    android:layout_marginLeft="@dimen/common_padding_less"
+                    android:layout_marginTop="@dimen/fragment_data_data_margin_top"
+                    android:text="@string/fragment_data_total_yesterday_title"
+                    android:textColor="@color/fragment_data_text_top_color"
+                    android:textSize="@dimen/text_smaller"/>
+
+                <TextView
+                    android:id="@+id/tv_total_yesterday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_total_yesterday_title"
+                    android:layout_below="@+id/tv_total_yesterday_title"
+                    android:layout_marginBottom="@dimen/fragment_data_number_margin_bot"
+                    android:text="319"
+                    android:textColor="@color/fragment_data_text_bot_color"
+                    android:textSize="@dimen/text_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/split_less"
+                    android:layout_below="@+id/tv_total_yesterday"
+                    android:layout_marginRight="@dimen/common_padding_less"
+                    android:background="@color/fragment_data_split_line"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

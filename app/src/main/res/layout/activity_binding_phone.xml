@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/user_phone_icon_1080p"/>
+
+        <EditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_phone"
+            android:layout_alignTop="@+id/iv_phone"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_phone"
+            android:background="@null"
+            android:hint="@string/activity_phone_register_hint_phone"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:textColor="@color/add_shop_text"
+            android:textColorHint="@color/add_shop_text_hint_color"
+            android:textSize="@dimen/text_small"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_more"
+            android:layout_below="@+id/iv_phone"
+            android:layout_toRightOf="@+id/iv_phone"
+            android:background="@color/fragment_security_split"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/user_key_icon_1080p"/>
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_key"
+            android:layout_alignTop="@+id/iv_key"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_clear"
+            android:layout_toRightOf="@id/iv_key"
+            android:background="@null"
+            android:hint="@string/activity_phone_register_hint_pwd"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/add_shop_text"
+            android:textColorHint="@color/add_shop_text_hint_color"
+            android:textSize="@dimen/text_small"/>
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_key"
+            android:layout_alignTop="@+id/iv_key"
+            android:layout_toLeftOf="@+id/view_split"
+            android:paddingLeft="@dimen/common_padding_more"
+            android:paddingRight="@dimen/common_padding_more"
+            android:src="@drawable/user_delete_icon_1080p"/>
+
+        <View
+            android:id="@+id/view_split"
+            android:layout_width="@dimen/split_more"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_key"
+            android:layout_alignTop="@+id/iv_key"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/activity_login_split_m_t_b"
+            android:layout_marginTop="@dimen/activity_login_split_m_t_b"
+            android:layout_toLeftOf="@+id/iv_eye"
+            android:background="@color/fragment_security_split"/>
+
+        <ImageView
+            android:id="@+id/iv_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_key"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/iv_key"
+            android:paddingLeft="@dimen/activity_phone_register_eye_padding_left"
+            android:paddingRight="@dimen/activity_phone_register_eye_padding_right"
+            android:src="@drawable/user_eye_close_con_1080p"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_more"
+            android:layout_below="@+id/iv_key"
+            android:layout_toRightOf="@+id/iv_key"
+            android:background="@color/fragment_security_split"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/user_code_icon_1080p"/>
+
+        <EditText
+            android:id="@+id/et_verify_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_code"
+            android:layout_alignTop="@+id/iv_code"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_code"
+            android:background="@null"
+            android:hint="@string/activity_phone_register_hint_code"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/add_shop_text"
+            android:textColorHint="@color/add_shop_text_hint_color"
+            android:textSize="@dimen/text_small"/>
+
+        <View
+            android:layout_width="@dimen/split_more"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/et_verify_code"
+            android:layout_alignTop="@+id/et_verify_code"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/activity_login_split_m_t_b"
+            android:layout_marginTop="@dimen/activity_login_split_m_t_b"
+            android:layout_toLeftOf="@+id/iv_time"
+            android:background="@color/fragment_security_split"/>
+
+        <ImageView
+            android:id="@+id/iv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/et_verify_code"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/et_verify_code"
+            android:paddingLeft="@dimen/activity_phone_register_eye_padding_left"
+            android:paddingRight="@dimen/activity_phone_register_eye_padding_right"
+            android:src="@drawable/user_eye_open_icon_1080p"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/tv_send_sms_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/et_verify_code"
+            android:layout_alignLeft="@id/iv_time"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/et_verify_code"
+            android:gravity="center"
+            android:padding="@dimen/activity_phone_register_time_down"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/text_medium"
+            tools:text="59s"/>
+
+        <Button
+            android:id="@+id/btn_send_sms_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/iv_time"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_phone_register_btn_get_code_m_r"
+            android:background="@drawable/button_binding_phone_send_sms_bg"
+            android:paddingBottom="@dimen/activity_phone_register_btn_get_code_p_t_b"
+            android:paddingLeft="@dimen/activity_phone_register_btn_get_code_p_r_l"
+            android:paddingRight="@dimen/activity_phone_register_btn_get_code_p_r_l"
+            android:paddingTop="@dimen/activity_phone_register_btn_get_code_p_t_b"
+            android:text="@string/activity_phone_button_register_send_sms_code"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"
+            android:visibility="visible"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_more"
+            android:layout_below="@+id/iv_code"
+            android:layout_toRightOf="@+id/iv_code"
+            android:background="@color/fragment_security_split"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_binding_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_button_margin_left_right"
+        android:layout_marginRight="@dimen/common_button_margin_left_right"
+        android:layout_marginTop="@dimen/activity_login_btn_m_t"
+        android:background="@drawable/button_phone_binding_bg"
+        android:paddingBottom="@dimen/common_button_padding_bot_top"
+        android:paddingTop="@dimen/common_button_padding_bot_top"
+        android:text="@string/activity_phone_button_binding"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_small"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_padding_less"
+        android:layout_marginRight="@dimen/common_padding_less"
+        android:layout_marginTop="@dimen/activity_binding_phone_notice_m_t"
+        android:singleLine="true"
+        android:text="@string/activity_binding_phone_notice"
+        android:textColor="@color/input_pwd_notice"
+        android:textSize="@dimen/text_smallest"/>
+</LinearLayout>

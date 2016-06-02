@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.sharedream.wifiguard.widget.NoScrollViewPager
+        android:id="@+id/vp_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_less"
+        android:background="@color/fragment_data_split_line"/>
+
+    <RadioGroup
+        android:id="@+id/rg_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/activity_main_rg_p_t_b"
+        android:paddingTop="@dimen/activity_main_rg_p_t_b"
+        android:weightSum="3">
+
+        <!--<RadioButton
+            android:id="@+id/rb_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/home_navigation_data_selector"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/activity_main_rb_p"
+            android:text="@string/activity_main_data"
+            android:textColor="@drawable/home_navigation_color"
+            android:textSize="@dimen/text_smallest"/>-->
+
+        <RadioButton
+            android:id="@+id/rb_security"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/home_navigation_security_selector"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/activity_main_rb_p"
+            android:text="@string/activity_main_security"
+            android:textColor="@drawable/home_navigation_color"
+            android:textSize="@dimen/text_smallest"/>
+
+        <RadioButton
+            android:id="@+id/rb_optimize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/home_navigation_optimize_selector"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/activity_main_rb_p"
+            android:text="@string/activity_main_optimize"
+            android:textColor="@drawable/home_navigation_color"
+            android:textSize="@dimen/text_smallest"/>
+
+        <RadioButton
+            android:id="@+id/rb_tool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/home_navigation_tool_selector"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/activity_main_rb_p"
+            android:text="@string/activity_main_tool"
+            android:textColor="@drawable/home_navigation_color"
+            android:textSize="@dimen/text_smallest"/>
+    </RadioGroup>
+</LinearLayout>
+

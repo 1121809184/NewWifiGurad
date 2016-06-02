@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_foot_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_padding_more"
+        android:src="@drawable/shop_manager_add_shop"/>
+
+    <TextView
+        android:id="@+id/tv_foot_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加新商铺"
+        android:textColor="@color/verify_center_text_color"
+        android:textSize="@dimen/text_small"/>
+</LinearLayout>

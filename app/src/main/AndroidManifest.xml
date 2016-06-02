@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.sharedream.wifiguard"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:name=".app.AppContext"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_app"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        tools:replace="android:theme"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="${BAIDU_API_KEY}"/>
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MerchantActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PoliceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LaunchRegisterMerchantActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WifiDisableActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddShopActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BindingWifiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PhoneRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InputPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NoShopsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OptimizeWifiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UserManagementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BindingPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UpdatePwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ScanWifiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SuspiciousWifiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SafeCheckActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WifiSpeedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShopManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShopDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WifiDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- qq登录 -->
+        <activity
+            android:name="com.sharedream.wifiguard.activity.ApManagerActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.sharedream.wifiguard.activity.SystemSettingsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.sharedream.wifiguard.activity.ResetPasswdActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.sharedream.wifiguard.activity.VerifyMobileActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.sharedream.wifiguard.activity.GroupBelongsActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent1105198268" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 微博登录 -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 微信登陆 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <service android:name=".version.FileDownloadService"/>
+
+        <activity
+            android:name=".activity.LoadingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomDialogStyle" />
+        <activity
+            android:name=".activity.WifiCheckActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomDialogStyle" />
+        <activity android:name=".activity.TestSpeedWithOptmizeActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/key_blue_icon_1080p"/>
+
+        <EditText
+            android:id="@+id/et_wifi_passwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_key"
+            android:layout_alignTop="@id/iv_key"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_key"
+            android:background="@null"
+            android:hint="@string/activity_input_pwd_key"
+            android:inputType="textPassword"
+            android:textColor="@color/add_shop_text"
+            android:textColorHint="@color/add_shop_text_hint_color"
+            android:textSize="@dimen/text_small"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_less"
+            android:layout_alignBottom="@id/iv_key"
+            android:layout_toRightOf="@id/iv_key"
+            android:background="@color/add_shop_split"/>
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_key"
+            android:layout_alignTop="@+id/iv_key"
+            android:layout_toLeftOf="@+id/view_split"
+            android:paddingLeft="@dimen/common_padding_more"
+            android:paddingRight="@dimen/common_padding_more"
+            android:src="@drawable/delete_icon_1080p"
+            android:visibility="invisible"/>
+
+        <View
+            android:id="@+id/view_split"
+            android:layout_width="@dimen/split_more"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_key"
+            android:layout_alignTop="@+id/iv_key"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/activity_input_pwd_split_m_t_b"
+            android:layout_marginTop="@dimen/activity_input_pwd_split_m_t_b"
+            android:layout_toLeftOf="@+id/iv_eye"
+            android:background="@color/fragment_security_split"/>
+
+        <ImageView
+            android:id="@+id/iv_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_key"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/iv_key"
+            android:paddingLeft="@dimen/activity_login_eye_p_l"
+            android:paddingRight="@dimen/activity_login_eye_p_r"
+            android:src="@drawable/user_eye_close_con_1080p"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_binding_complete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_button_margin_left_right"
+        android:layout_marginRight="@dimen/common_button_margin_left_right"
+        android:layout_marginTop="@dimen/activity_login_btn_m_t"
+        android:background="@drawable/button_now_register_shop_bg"
+        android:paddingBottom="@dimen/common_button_padding_bot_top"
+        android:paddingTop="@dimen/common_button_padding_bot_top"
+        android:text="@string/activity_input_pwd_next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_small"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_padding_less"
+        android:layout_marginRight="@dimen/common_padding_less"
+        android:layout_marginTop="@dimen/activity_input_pwd_notice_m_t"
+        android:maxLines="2"
+        android:text="@string/activity_input_pwd_explain"
+        android:textColor="@color/input_pwd_notice"
+        android:textSize="@dimen/text_smaller"/>
+</LinearLayout>

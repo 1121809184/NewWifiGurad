@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/theme_color">
+
+    <include layout="@layout/title_bar"/>
+
+    <!--优化前-->
+    <ImageView
+        android:id="@+id/iv_optimize_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/optimization_start_bg_1080p"/>
+
+    <ImageView
+        android:id="@+id/iv_optimize_bg_real"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/optimization_loading_bg_real_1080p"/>
+
+    <ImageView
+        android:id="@+id/iv_optimize_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/optimization_start_btn_1080p"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_optimize_before"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/iv_optimize_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/optimization_wifi_icon"/>
+
+        <TextView
+            android:id="@+id/tv_optimize_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_optimize_wifi"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/activity_optimize_text_padding"
+            android:text="@string/activity_optimize_click"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/text_small"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_optimize_after"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/tv_optimize_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/theme_color"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_optimize_score"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/activity_optimize_text_padding"
+            android:text="@string/activity_optimize_state"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/text_small"/>
+
+    </RelativeLayout>
+</RelativeLayout>

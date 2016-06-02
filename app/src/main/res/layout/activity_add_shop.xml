@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/store_icon_1080p"/>
+
+        <EditText
+            android:id="@+id/et_shop_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_shop"
+            android:layout_alignTop="@id/iv_shop"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_shop"
+            android:background="@null"
+            android:hint="@string/activity_add_shop_name"
+            android:inputType="text"
+            android:textColor="@color/add_shop_text"
+            android:textColorHint="@color/add_shop_text_hint_color"
+            android:textSize="@dimen/text_small"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_less"
+            android:layout_alignBottom="@id/iv_shop"
+            android:layout_toRightOf="@id/iv_shop"
+            android:background="@color/add_shop_split"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/shop_phone_icon_1080p"/>
+
+        <EditText
+            android:id="@+id/et_shop_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_phone"
+            android:layout_alignTop="@id/iv_phone"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_phone"
+            android:background="@null"
+            android:hint="@string/activity_add_shop_phone"
+            android:inputType="phone"
+            android:textColor="@color/add_shop_text"
+            android:textColorHint="@color/add_shop_text_hint_color"
+            android:textSize="@dimen/text_small"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_less"
+            android:layout_alignBottom="@id/iv_phone"
+            android:layout_toRightOf="@id/iv_phone"
+            android:background="@color/add_shop_split"/>
+    </RelativeLayout>
+
+    <!--联系人姓名-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/name_icon_1080p"/>
+
+        <EditText
+            android:id="@+id/et_shop_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_person"
+            android:layout_alignTop="@id/iv_person"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_person"
+            android:background="@null"
+            android:hint="@string/activity_add_shop_person"
+            android:inputType="text"
+            android:textColor="@color/add_shop_text"
+            android:textColorHint="@color/add_shop_text_hint_color"
+            android:textSize="@dimen/text_small"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_less"
+            android:layout_alignBottom="@id/iv_person"
+            android:layout_toRightOf="@id/iv_person"
+            android:background="@color/add_shop_split"/>
+    </RelativeLayout>
+
+    <!--地址-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/address_icon_1080p"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_address"
+            android:layout_alignTop="@id/iv_address"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_address"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+                <EditText
+                    android:id="@+id/et_shop_province"
+                    android:layout_width="@dimen/activity_update_shop_location_width"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:hint="广东省"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/add_shop_text"
+                    android:textColorHint="@color/add_shop_text_hint_color"
+                    android:textSize="@dimen/text_small"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/et_shop_province"
+                    android:padding="@dimen/activity_update_shop_drop_padding"
+                    android:src="@drawable/push_blue_icon_1080p"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+                <EditText
+                    android:id="@+id/et_shop_city"
+                    android:layout_width="@dimen/activity_update_shop_location_width"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:hint="广州市"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/add_shop_text"
+                    android:textColorHint="@color/add_shop_text_hint_color"
+                    android:textSize="@dimen/text_small"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/et_shop_city"
+                    android:padding="@dimen/activity_update_shop_drop_padding"
+                    android:src="@drawable/push_blue_icon_1080p"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+                <EditText
+                    android:id="@+id/et_shop_district"
+                    android:layout_width="@dimen/activity_update_shop_location_width"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:hint="海珠区"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/add_shop_text"
+                    android:textColorHint="@color/add_shop_text_hint_color"
+                    android:textSize="@dimen/text_small"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/et_shop_district"
+                    android:padding="@dimen/activity_update_shop_drop_padding"
+                    android:src="@drawable/push_blue_icon_1080p"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_less"
+            android:layout_alignBottom="@id/iv_address"
+            android:layout_toRightOf="@id/iv_address"
+            android:background="@color/add_shop_split"/>
+    </RelativeLayout>
+
+    <!--街道名称-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_address_in_invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_add_shop_temp_padding_t_b"
+            android:paddingLeft="@dimen/common_padding_more"
+            android:paddingRight="@dimen/common_padding_more"
+            android:paddingTop="@dimen/activity_add_shop_temp_padding_t_b"
+            android:src="@drawable/shop_phone_icon_1080p"
+            android:visibility="invisible"/>
+
+        <EditText
+            android:id="@+id/et_shop_street"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/iv_address_in_invisible"
+            android:background="@null"
+            android:hint="@string/activity_add_shop_street"
+            android:inputType="textMultiLine"
+            android:maxLines="2"
+            android:paddingRight="@dimen/common_padding_less"
+            android:paddingTop="@dimen/activity_update_shop_street_padding_top"
+            android:textColor="@color/add_shop_text"
+            android:textColorHint="@color/add_shop_text_hint_color"
+            android:textSize="@dimen/text_small"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_address_in_invisible"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/activity_update_shop_location_magin_bot"
+            android:layout_marginRight="@dimen/common_padding_more">
+
+            <TextView
+                android:id="@+id/tv_use_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="@string/activity_add_shop_use_address"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/text_smallest"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_more"
+                android:layout_alignLeft="@+id/tv_use_address"
+                android:layout_alignRight="@+id/tv_use_address"
+                android:layout_below="@+id/tv_use_address"
+                android:background="@color/theme_color"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_less"
+            android:layout_alignBottom="@id/iv_address_in_invisible"
+            android:layout_toRightOf="@id/iv_address_in_invisible"
+            android:background="@color/add_shop_split"/>
+    </RelativeLayout>
+
+    <!--分类-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/class_icon_1080p"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_category"
+            android:layout_alignTop="@id/iv_category"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_category"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/rl_shop_category_big"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center_horizontal">
+
+                <!--<EditText
+                android:id="@+id/et_shop_category_big"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:ellipsize="end"
+                android:clickable="true"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="@string/activity_add_shop_big_category"
+                android:inputType="text"
+                android:singleLine="true"
+                android:text="@string/activity_add_shop_big_category"
+                android:textColor="@color/add_shop_text"
+                android:textColorHint="@color/add_shop_text_hint_color"
+                android:textSize="16sp"/>-->
+                <TextView
+                    android:id="@+id/et_shop_category_big"
+                    android:layout_width="@dimen/activity_update_shop_location_width"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/activity_add_shop_big_category"
+                    android:textColor="@color/add_shop_text"
+                    android:textSize="@dimen/text_small"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/et_shop_category_big"
+                    android:padding="@dimen/activity_update_shop_drop_padding"
+                    android:src="@drawable/push_blue_icon_1080p"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_shop_category_small"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center_horizontal">
+
+                <!--<EditText
+                    android:id="@+id/et_shop_category_small"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:hint="@string/activity_add_shop_small_category"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:text="@string/activity_add_shop_small_category"
+                    android:textColor="@color/add_shop_text"
+                    android:textColorHint="@color/add_shop_text_hint_color"
+                    android:textSize="16sp"/>-->
+                <TextView
+                    android:id="@+id/et_shop_category_small"
+                    android:layout_width="@dimen/activity_update_shop_location_width"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/activity_add_shop_small_category"
+                    android:textColor="@color/add_shop_text"
+                    android:textSize="@dimen/text_small"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/et_shop_category_small"
+                    android:padding="@dimen/activity_update_shop_drop_padding"
+                    android:src="@drawable/push_blue_icon_1080p"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:visibility="invisible">
+
+                <EditText
+                    android:id="@+id/et_shop_category_invisible"
+                    android:layout_width="@dimen/activity_update_shop_location_width"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/add_shop_text"
+                    android:textColorHint="@color/add_shop_text_hint_color"
+                    android:textSize="@dimen/text_small"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/et_shop_category_invisible"
+                    android:padding="@dimen/activity_update_shop_drop_padding"
+                    android:src="@drawable/push_blue_icon_1080p"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_less"
+            android:layout_alignBottom="@id/iv_category"
+            android:layout_toRightOf="@id/iv_category"
+            android:background="@color/add_shop_split"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_next_binding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="@dimen/common_button_margin_left_right"
+        android:layout_marginRight="@dimen/common_button_margin_left_right"
+        android:layout_marginTop="@dimen/activity_login_btn_m_t"
+        android:background="@drawable/button_now_register_shop_bg"
+        android:paddingBottom="@dimen/common_button_padding_bot_top"
+        android:paddingTop="@dimen/common_button_padding_bot_top"
+        android:text="@string/activity_binding_wifi_next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_small"/>
+</LinearLayout>

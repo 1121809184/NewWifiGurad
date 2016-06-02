@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_gray_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_tool_one_key_wifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_tool_space"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_one_key_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/one_key_wifi_icon_1080p"/>
+
+        <TextView
+            android:id="@+id/tv_tool_link_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_one_key_wifi"
+            android:text="@string/fragment_tool_one_key_wifi"
+            android:textColor="@color/fragment_security_text_color"
+            android:textSize="@dimen/text_medium"/>
+
+        <!--<TextView
+            android:id="@+id/tv_wifi_security_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tool_link_wifi"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_one_key_wifi"
+            android:text="账号风险，WiFi报警"
+            android:textColor="@color/fragment_security_text_color_notice"
+            android:textSize="14sp"/>-->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_padding_more"
+            android:src="@drawable/temp_item_arrow"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_less"
+            android:layout_below="@+id/iv_one_key_wifi"
+            android:layout_toRightOf="@+id/iv_one_key_wifi"
+            android:background="@color/fragment_security_split"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_tool_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/setup_icon_1080p"/>
+
+        <TextView
+            android:id="@+id/tv_tool_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_setting"
+            android:text="@string/fragment_tool_user_management"
+            android:textColor="@color/fragment_security_text_color"
+            android:textSize="@dimen/text_medium"/>
+
+        <!--<TextView
+            android:id="@+id/tv_wifi_problem_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tool_setting"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_setting"
+            android:text="系统查询附近可疑Wi-Fi热点信号"
+            android:textColor="@color/fragment_security_text_color_notice"
+            android:textSize="14sp"/>-->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_padding_more"
+            android:src="@drawable/temp_item_arrow"/>
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/iv_setting"
+            android:layout_toRightOf="@+id/iv_setting"
+            android:background="@color/fragment_security_split"/>-->
+    </RelativeLayout>
+</LinearLayout>

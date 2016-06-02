@@ -1,0 +1,110 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="text_larger">22sp</dimen>
+    <dimen name="text_large">20sp</dimen>
+    <dimen name="text_medium">18sp</dimen>
+    <dimen name="text_small">16sp</dimen>
+    <dimen name="text_smaller">14sp</dimen>
+    <dimen name="text_smallest">12sp</dimen>
+
+    <dimen name="common_padding_less">15dp</dimen>
+    <dimen name="common_padding_more">20dp</dimen>
+    <dimen name="split_less">0.5dp</dimen>
+    <dimen name="split_more">1dp</dimen>
+
+    <dimen name="title_bar_bg_padding_bot_top">5dp</dimen>
+    <dimen name="title_bar_image_padding">10dp</dimen>
+    <dimen name="item_margin_bot">2dp</dimen>
+    <dimen name="item_margin_top">10dp</dimen>
+    <dimen name="item_margin_left">15dp</dimen>
+    <dimen name="dialog_cancel_margin_top">20dp</dimen>
+    <dimen name="dialog_message_margin_top_bot">20dp</dimen>
+    <dimen name="dialog_message_button_padding">5dp</dimen>
+    <dimen name="dialog_category_height">300dp</dimen>
+    <dimen name="common_button_margin_bot_top">10dp</dimen>
+    <dimen name="common_button_margin_left_right">15dp</dimen>
+    <dimen name="common_button_padding_bot_top">10dp</dimen>
+
+    <dimen name="fragment_data_person_padding_bot">30dp</dimen>
+    <dimen name="fragment_data_data_margin_bot">5dp</dimen>
+    <dimen name="fragment_data_data_margin_top">10dp</dimen>
+    <dimen name="fragment_data_number_margin_bot">10dp</dimen>
+    <dimen name="fragment_data_big_padding">20dp</dimen>
+    <dimen name="fragment_tool_space">20dp</dimen>
+    <dimen name="fragment_security_text_space">2dp</dimen>
+    <dimen name="fragment_optimize_text_space">2dp</dimen>
+
+    <dimen name="activity_layout_space">20dp</dimen>
+    <dimen name="activity_text_space">5dp</dimen>
+    <dimen name="activity_verify_center_success">20dp</dimen>
+    <dimen name="activity_verify_center_margin_top_bot">10dp</dimen>
+    <dimen name="activity_verify_center_padding_top_bot">10dp</dimen>
+    <dimen name="activity_update_shop_location_width">50dp</dimen>
+    <dimen name="activity_update_shop_drop_padding">5dp</dimen>
+    <dimen name="activity_update_shop_street_padding_top">10dp</dimen>
+    <dimen name="activity_update_shop_location_magin_bot">10dp</dimen>
+    <dimen name="activity_update_shop_binding_wifi_margin_top_bot">10dp</dimen>
+    <dimen name="activity_update_pwd_button_margin_top">30dp</dimen>
+    <dimen name="activity_splash_logo_magin_top">80dp</dimen>
+    <dimen name="activity_splash_text_magin_bot">30dp</dimen>
+    <dimen name="activity_register_logo_magin_top">50dp</dimen>
+    <dimen name="activity_register_login_margin_bot">40dp</dimen>
+    <dimen name="activity_register_login_text_padding_bot">2dp</dimen>
+    <dimen name="activity_register_login_text_padding_top">5dp</dimen>
+    <dimen name="activity_phone_register_margin_top">100dp</dimen>
+    <dimen name="activity_phone_register_split_margin_top_bot">10dp</dimen>
+    <dimen name="activity_phone_register_eye_padding_left">20dp</dimen>
+    <dimen name="activity_phone_register_eye_padding_right">30dp</dimen>
+    <dimen name="activity_phone_register_time_down">15dp</dimen>
+    <dimen name="activity_phone_register_btn_get_code_m_r">15dp</dimen>
+    <dimen name="activity_phone_register_btn_get_code_p_r_l">15dp</dimen>
+    <dimen name="activity_phone_register_btn_get_code_p_t_b">10dp</dimen>
+    <dimen name="activity_phone_register_btn_m_t">30dp</dimen>
+    <dimen name="activity_phone_register_rg_m_t_b">20dp</dimen>
+    <dimen name="activity_optimize_text_loading">55sp</dimen>
+    <dimen name="activity_optimize_text_padding">10dp</dimen>
+    <dimen name="activity_no_shop_logo_m_t">50dp</dimen>
+    <dimen name="activity_no_shop_text_m_t">20dp</dimen>
+    <dimen name="activity_no_shop_btn_m_t">50dp</dimen>
+    <dimen name="activity_main_rg_p_t_b">5dp</dimen>
+    <dimen name="activity_main_rb_p">3dp</dimen>
+    <dimen name="activity_login_layout_m_t">100dp</dimen>
+    <dimen name="activity_login_split_m_t_b">10dp</dimen>
+    <dimen name="activity_login_eye_p_l">20dp</dimen>
+    <dimen name="activity_login_eye_p_r">30dp</dimen>
+    <dimen name="activity_login_btn_m_t">30dp</dimen>
+    <dimen name="activity_login_rg_m_t_b">30dp</dimen>
+    <dimen name="activity_login_rb_m_l_r">40dp</dimen>
+    <dimen name="activity_location_address_m_l_r">20dp</dimen>
+    <dimen name="activity_location_address_m_t">50dp</dimen>
+    <dimen name="activity_location_text_use_address">10dp</dimen>
+    <dimen name="activity_location_mark_padding_bot">30dp</dimen>
+    <dimen name="activity_location_original_addr_w_h">35dp</dimen>
+    <dimen name="activity_location_original_addr_m_b">25dp</dimen>
+    <dimen name="activity_location_original_addr_m_r">5dp</dimen>
+    <dimen name="activity_input_pwd_split_m_t_b">10dp</dimen>
+    <dimen name="activity_input_pwd_notice_m_t">20dp</dimen>
+    <dimen name="activity_binding_wifi_shop_padding">20dp</dimen>
+    <dimen name="activity_binding_wifi_my_wifi_p_b">15dp</dimen>
+    <dimen name="activity_binding_wifi_my_wifi_m_r">20dp</dimen>
+    <dimen name="activity_binding_wifi_my_wifi_down_line_p">2dp</dimen>
+    <dimen name="activity_binding_wifi_wifi_off_photo_w_h">150dp</dimen>
+    <dimen name="activity_binding_phone_notice_m_t">10dp</dimen>
+    <dimen name="activity_add_user_margin_top">15dp</dimen>
+    <dimen name="activity_add_user_text_space">2dp</dimen>
+    <dimen name="activity_add_shop_temp_padding_t_b">30dp</dimen>
+
+    <dimen name="activity_scan_wifi_button_w_h">160dp</dimen>
+    <dimen name="activity_scan_wifi_point_w_h">12dp</dimen>
+    <dimen name="activity_scan_wifi_problem_wifi_m_b">60dp</dimen>
+    <dimen name="activity_scan_wifi_percent_text">60sp</dimen>
+    <dimen name="activity_sus_wifi_blue_shap_w_h">70dp</dimen>
+    <dimen name="activity_sus_wifi_text_size">30sp</dimen>
+    <dimen name="activity_safe_check_bold_text_m_b">10dp</dimen>
+    <dimen name="activity_wifi_speed_title_m_t">30dp</dimen>
+    <dimen name="activity_wifi_speed_title_p_l_r">25dp</dimen>
+
+</resources>

@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+        }
+    }
+    compileSdkVersion 22
+    buildToolsVersion '22.0.1'
+    defaultConfig {
+        applicationId "com.sharedream.wifiguard"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0.0"
+        manifestPlaceholders = [BAIDU_API_KEY: "QhuplwyRrneroqCgIsmjPu0W"]
+    }
+    buildTypes {
+        release {
+            debuggable false
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        preview {
+            debuggable true
+            shrinkResources true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            debuggable true
+            signingConfig signingConfigs.config
+        }
+    }
+
+    //渠道Flavors
+    productFlavors {
+        external {}
+    }
+
+    productFlavors.all { flavor ->
+        //设置apk名
+        applicationVariants.all { variant ->
+            appendVersionName(variant, flavor, defaultConfig)
+        }
+    }
+
+    //编译选项
+    compileOptions {
+        //用于指定在编译Java源文件时所使用的Java版本
+        sourceCompatibility JavaVersion.VERSION_1_7
+        //
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+def appendVersionName(variant, flavor, defaultConfig) {
+    variant.outputs.each { output ->
+        //是否优化了apk程序包
+        if (output.zipAlign) {
+            def file = output.outputFile
+            def fileName = file.name.replace("app-" + flavor.name + "-release.apk", "wifiguard-" + flavor.name + "-" + defaultConfig.versionName + ".apk")
+            output.outputFile = new File(file.parent, fileName)
+        }
+
+        def file = output.packageApplication.outputFile
+        def fileName = file.name.replace("app-" + flavor.name + "-release.apk", "wifiguard-" + flavor.name + "-" + defaultConfig.versionName + ".apk")
+        output.packageApplication.outputFile = new File(file.parent, fileName)
+    }
+}
+
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'in.srain.cube:ultra-ptr:1.0.10'
+    compile 'com.hannesdorfmann.smoothprogressbar:library:1.0.0'
+    compile(name: 'sharedreamwifisdk-release', ext: 'aar')
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.qiniu:qiniu-android-sdk:7.2.+'
+    compile 'com.google.code.gson:gson:2.6.2'
+}

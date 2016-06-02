@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/binding_wifi_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_binding_wifi_shop_padding"
+            android:text="@string/activity_binding_wifi_shop"
+            android:textColor="@color/binding_wifi_text_color"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_shop"
+            android:layout_alignTop="@id/tv_shop"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_shop"
+            android:gravity="center_vertical"
+            android:textColor="@color/binding_wifi_text_color"
+            android:textSize="@dimen/text_small"
+            tools:text="外商大酒店" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_less"
+            android:layout_alignBottom="@id/tv_shop"
+            android:layout_toRightOf="@id/tv_shop"
+            android:background="@color/binding_wifi_split" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_current_wifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_binding_wifi_shop_padding"
+                android:text="@string/activity_binding_wifi_connected"
+                android:textColor="@color/binding_wifi_text_color"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/tv_shop_wifi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_wifi"
+                android:layout_alignTop="@id/tv_wifi"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_wifi"
+                android:gravity="center_vertical"
+                android:textColor="@color/binding_wifi_text_color"
+                android:textSize="@dimen/text_small"
+                tools:text="外商大酒店FreeWifi_021" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/activity_binding_wifi_my_wifi_p_b">
+
+            <TextView
+                android:id="@+id/tv_binding_my_wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_binding_wifi_my_wifi_m_r"
+                android:clickable="true"
+                android:padding="@dimen/activity_binding_wifi_my_wifi_down_line_p"
+                android:text="@string/activity_binding_wifi_as_my_wifi"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/text_smaller" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/split_more"
+                android:layout_alignLeft="@id/tv_binding_my_wifi"
+                android:layout_alignRight="@id/tv_binding_my_wifi"
+                android:layout_below="@id/tv_binding_my_wifi"
+                android:background="@color/theme_color" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_wifi_list_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/common_padding_less"
+        android:paddingLeft="@dimen/common_padding_more"
+        android:paddingTop="@dimen/common_padding_less"
+        android:text="@string/activity_binding_wifi_select_wifi"
+        android:textColor="@color/binding_wifi_text_notice"
+        android:textSize="@dimen/text_smaller" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null" />
+
+        <ImageView
+            android:id="@+id/iv_list_no_data"
+            android:layout_width="@dimen/activity_binding_wifi_wifi_off_photo_w_h"
+            android:layout_height="@dimen/activity_binding_wifi_wifi_off_photo_w_h"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_wifi_off" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_tips"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/iv_list_no_data"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:text="触摸屏幕打开WiFi"-->
+            <!--android:textColor="@color/fragment_security_text_color"-->
+            <!--android:textSize="@dimen/text_small" />-->
+    </RelativeLayout>
+</LinearLayout>

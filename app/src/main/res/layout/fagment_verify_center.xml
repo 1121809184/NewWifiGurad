@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+
+    <com.sharedream.wifiguard.widget.MySwipeRefreshLauoyt
+        android:id="@+id/srl_verify_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_success"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/common_padding_less"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/success_icon_1080p"/>
+
+                <TextView
+                    android:id="@+id/tv_des_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@+id/iv_success"
+                    android:text="@string/activity_verify_center_success"
+                    android:textColor="@color/verify_center_text_color"
+                    android:textSize="@dimen/text_medium"/>
+
+                <TextView
+                    android:id="@+id/tv_des_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_des_1"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@+id/iv_success"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/activity_verify_center_success_des"
+                    android:textColor="@color/verify_center_text_notice"
+                    android:textSize="@dimen/text_smallest"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_binding_my_shop_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/verify_center_bg"
+                android:maxLines="2"
+                android:padding="@dimen/common_padding_less"
+                android:textColor="@color/verify_center_text_notice"
+                android:textSize="@dimen/text_smallest"
+                tools:text="@string/activity_verify_center_binding_already"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ListView
+                    android:id="@+id/lv_shop_and_wifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:footerDividersEnabled="false"
+                    android:headerDividersEnabled="false"/>
+
+                <RelativeLayout
+                    android:id="@+id/ll_no_shops_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/tv_no_shops_notice_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:text="尚未添加商铺"
+                        android:textColor="@color/verify_center_text_color"
+                        android:textSize="@dimen/text_larger"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_no_shops_notice_1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="1dp"
+                        android:text="立即添加，体验Wi-Fi安全"
+                        android:textColor="@color/verify_center_text_color"
+                        android:textSize="@dimen/text_small"/>
+
+                    <Button
+                        android:id="@+id/btn_add_some_shops"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/tv_no_login_notice"
+                        android:layout_marginLeft="@dimen/common_padding_more"
+                        android:layout_marginRight="@dimen/common_padding_more"
+                        android:background="@drawable/button_now_register_shop_bg"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/item_add_new_shop"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"/>
+
+                    <TextView
+                        android:id="@+id/tv_no_login_notice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="10dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/item_add_new_shop_no_login_notice"
+                        android:textColor="@color/verify_center_text_notice"
+                        android:textSize="@dimen/text_smallest"/>
+                </RelativeLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </com.sharedream.wifiguard.widget.MySwipeRefreshLauoyt>
+</LinearLayout>

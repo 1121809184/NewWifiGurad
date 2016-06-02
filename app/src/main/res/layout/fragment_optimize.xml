@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/theme_gray_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/rl_wifi_safe_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/common_padding_more">
+
+            <ImageView
+                android:id="@+id/iv_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/wifi_safe_check_icon_1080p"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_check"
+                android:layout_marginTop="@dimen/fragment_optimize_text_space"
+                android:text="@string/fragment_optimize_safe_check"
+                android:textColor="@color/fragment_security_text_color"
+                android:textSize="@dimen/text_small"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_wifi_speed_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/common_padding_more">
+
+            <ImageView
+                android:id="@+id/iv_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/wifi_speed_check_icon_1080"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_speed"
+                android:layout_marginTop="@dimen/fragment_optimize_text_space"
+                android:text="@string/fragment_optimize_speed_check"
+                android:textColor="@color/fragment_security_text_color"
+                android:textSize="@dimen/text_small"/>
+        </RelativeLayout>
+    </LinearLayout>-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_current_wifi_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fragment_tool_space"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/iv_tool_wifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="25dp"
+                    android:src="@drawable/wifi_blue3_icon_1080p"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_current_wifi_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/iv_tool_wifi"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_current_wifi_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/fragment_security_text_color_notice"
+                        android:textSize="@dimen/text_smaller"
+                        tools:text="MX1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_current_wifi_detail_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/iv_tool_wifi"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_current_wifi_ssid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/fragment_security_text_color"
+                        android:textSize="@dimen/text_large"
+                        tools:text="外商大酒店"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--安全检测-->
+            <RelativeLayout
+                android:id="@+id/rl_wifi_safe_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/iv_safe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/common_padding_more"
+                    android:src="@drawable/wifi_safe_check_icon_1080p"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/iv_safe"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_wifi_safe_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fragment_optimize_safe_check"
+                        android:textColor="@color/fragment_security_text_color"
+                        android:textSize="@dimen/text_medium"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fragment_optimize_text_space"
+                        android:text="@string/fragment_optimize_safe_check_summary"
+                        android:textColor="@color/fragment_security_text_color_notice"
+                        android:textSize="@dimen/text_smallest"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_padding_more"
+                    android:src="@drawable/temp_item_arrow"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/split_less"
+                    android:layout_below="@+id/iv_safe"
+                    android:layout_marginLeft="@dimen/common_padding_more"
+                    android:background="@color/fragment_security_split"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_wifi_speed_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/iv_optimize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/common_padding_more"
+                    android:src="@drawable/wifi_optimize_icon_1080p"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/iv_optimize"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_wifi_optimize_net"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fragment_optimize_speed_check"
+                        android:textColor="@color/fragment_security_text_color"
+                        android:textSize="@dimen/text_medium"/>
+
+                    <TextView
+                        android:id="@+id/tv_wifi_security_notice_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fragment_optimize_text_space"
+                        android:text="@string/fragment_optimize_speed_check_summary"
+                        android:textColor="@color/fragment_security_text_color_notice"
+                        android:textSize="@dimen/text_smallest"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_padding_more"
+                    android:src="@drawable/temp_item_arrow"/>
+
+                <!--<View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/split_less"
+                    android:layout_below="@+id/iv_optimize"
+                    android:layout_marginLeft="@dimen/common_padding_more"
+                    android:background="@color/fragment_security_split"/>-->
+            </RelativeLayout>
+
+            <!--可疑设备检测-->
+            <!--<RelativeLayout
+                android:id="@+id/rl_wifi_suspicious_devices"
+                android:layout_width="match_parent"
+                android:visibility="invisible"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/iv_suspicious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/common_padding_more"
+                    android:src="@drawable/wifi_suspicious_devices_icon_1080"/>
+
+                <TextView
+                    android:id="@+id/tv_wifi_problem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/iv_suspicious"
+                    android:layout_marginTop="@dimen/common_padding_more"
+                    android:layout_toRightOf="@+id/iv_suspicious"
+                    android:text="@string/fragment_optimize_device_check"
+                    android:textColor="@color/fragment_security_text_color"
+                    android:textSize="@dimen/text_medium"/>
+
+                <TextView
+                    android:id="@+id/tv_wifi_problem_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_wifi_problem"
+                    android:layout_marginTop="@dimen/fragment_optimize_text_space"
+                    android:layout_toRightOf="@+id/iv_suspicious"
+                    android:text="@string/fragment_optimize_device_check_summary"
+                    android:textColor="@color/fragment_security_text_color_notice"
+                    android:textSize="@dimen/text_smaller"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_padding_more"
+                    android:src="@drawable/temp_item_arrow"/>
+            </RelativeLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/rl_wifi_police"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_more"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/iv_security"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/common_padding_more"
+                    android:src="@drawable/wifi110_icon_1080p"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/iv_security"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_wifi_security"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fragment_security_wifi_police"
+                        android:textColor="@color/fragment_security_text_color"
+                        android:textSize="@dimen/text_medium"/>
+
+                    <TextView
+                        android:id="@+id/tv_wifi_security_notice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fragment_security_text_space"
+                        android:text="@string/fragment_security_wifi_police_summary"
+                        android:textColor="@color/fragment_security_text_color_notice"
+                        android:textSize="@dimen/text_smallest"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_padding_more"
+                    android:src="@drawable/temp_item_arrow"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/split_less"
+                    android:layout_below="@+id/iv_security"
+                    android:layout_marginLeft="@dimen/common_padding_more"
+                    android:background="@color/fragment_security_split"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_wifi_problem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/iv_problem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/common_padding_more"
+                    android:src="@drawable/problem_wifi_icon_1080p"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_problem"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_wifi_problem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fragment_security_wifi_problem"
+                        android:textColor="@color/fragment_security_text_color"
+                        android:textSize="@dimen/text_medium"/>
+
+                    <TextView
+                        android:id="@+id/tv_wifi_problem_notice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fragment_security_text_space"
+                        android:text="@string/fragment_security_wifi_problem_summary"
+                        android:textColor="@color/fragment_security_text_color_notice"
+                        android:textSize="@dimen/text_smallest"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_padding_more"
+                    android:src="@drawable/temp_item_arrow"/>
+
+                <!--<View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/iv_problem"
+                    android:layout_toRightOf="@+id/iv_problem"
+                    android:background="@color/fragment_security_split"/>-->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_sys_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_more"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/iv_sys_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/common_padding_more"
+                    android:src="@drawable/icon_setting_1080p"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_sys_setting"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_system_setting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fragment_security_system_setting"
+                        android:textColor="@color/fragment_security_text_color"
+                        android:textSize="@dimen/text_medium"/>
+
+                    <TextView
+                        android:id="@+id/tv_system_setting_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fragment_security_text_space"
+                        android:text="@string/fragment_security_system_setting_summary"
+                        android:textColor="@color/fragment_security_text_color_notice"
+                        android:textSize="@dimen/text_smallest"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_padding_more"
+                    android:src="@drawable/temp_item_arrow"/>
+
+                <!--<View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/iv_problem"
+                    android:layout_toRightOf="@+id/iv_problem"
+                    android:background="@color/fragment_security_split"/>-->
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

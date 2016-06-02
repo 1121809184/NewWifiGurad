@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_bg"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/text_medium"/>
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_title"
+            android:src="@drawable/sdk_small"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_less"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/background_split"/>
+
+    <TextView
+        android:id="@+id/tv_update_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/common_padding_less"
+        android:paddingRight="@dimen/common_padding_less"
+        android:layout_marginTop="5dp"
+        android:text="确定停止下载文件吗？"
+        android:textColor="@color/theme_text_color"
+        android:textSize="@dimen/text_small"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_button_margin_bot_top"
+            android:layout_marginLeft="@dimen/common_button_margin_left_right"
+            android:layout_marginRight="@dimen/common_button_margin_left_right"
+            android:layout_marginTop="@dimen/common_padding_more"
+            android:layout_weight="1"
+            android:background="@drawable/button_shop_group_skip_bg"
+            android:paddingBottom="@dimen/common_button_padding_bot_top"
+            android:paddingTop="@dimen/common_button_padding_bot_top"
+            android:text="否"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"/>
+
+        <Button
+            android:id="@+id/btn_yes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_button_margin_bot_top"
+            android:layout_marginLeft="@dimen/common_button_margin_left_right"
+            android:layout_marginRight="@dimen/common_button_margin_left_right"
+            android:layout_marginTop="@dimen/common_padding_more"
+            android:layout_weight="1"
+            android:background="@drawable/button_ap_manager_save_bg"
+            android:paddingBottom="@dimen/common_button_padding_bot_top"
+            android:paddingTop="@dimen/common_button_padding_bot_top"
+            android:text="是"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/theme_gray_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_more"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_manager_shop_logo"
+            android:layout_width="128px"
+            android:layout_height="128px"
+            android:layout_margin="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/shop_sys_logo"/>
+
+        <TextView
+            android:id="@+id/tv_manager_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/iv_manager_shop_logo"
+            android:textColor="@color/verify_center_text_color"
+            android:textSize="@dimen/text_medium"
+            tools:text="山东老家（珠江新城店）"/>
+
+        <TextView
+            android:id="@+id/tv_manager_shop_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_below="@id/tv_manager_shop_name"
+            android:layout_toRightOf="@+id/iv_manager_shop_logo"
+            android:textColor="@color/verify_center_text_shop_wifi"
+            android:textSize="@dimen/text_smallest"
+            tools:text="地址：广州市珠江新城北路21号"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/common_padding_more"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_manager_shop_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_temp_image_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:src="@drawable/shop_manager_shop_edit"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_temp_image_1"
+                android:text="编辑商铺信息"
+                android:textColor="@color/verify_center_text_color"
+                android:textSize="@dimen/text_medium"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_less"
+                android:layout_alignBottom="@id/iv_temp_image_1"
+                android:layout_marginLeft="@dimen/common_padding_less"
+                android:background="@color/background_split"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="15dp"
+                android:src="@drawable/temp_item_arrow"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_manager_wifi_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_temp_image_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:src="@drawable/shop_manager_wifi_edit"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_temp_image_2"
+                android:text="编辑热点信息"
+                android:textColor="@color/verify_center_text_color"
+                android:textSize="@dimen/text_medium"/>
+
+            <TextView
+                android:id="@+id/tv_manager_shop_wifi_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/arrow"
+                android:text="拥有2个Wi-Fi"
+                android:textColor="@color/verify_center_text_shop_wifi"
+                android:textSize="@dimen/text_smallest"/>
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="15dp"
+                android:src="@drawable/temp_item_arrow"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_manager_delete_shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_button_margin_bot_top"
+            android:layout_marginLeft="@dimen/common_button_margin_left_right"
+            android:layout_marginRight="@dimen/common_button_margin_left_right"
+            android:layout_marginTop="@dimen/common_button_margin_bot_top"
+            android:background="@drawable/button_shop_manager_delete_bg"
+            android:paddingBottom="@dimen/common_button_padding_bot_top"
+            android:paddingTop="@dimen/common_button_padding_bot_top"
+            android:text="删除此商铺"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"/>
+    </LinearLayout>
+</LinearLayout>

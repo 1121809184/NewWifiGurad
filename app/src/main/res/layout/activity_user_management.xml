@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_gray_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_current_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_layout_space"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/current_user_icon_1080p"/>
+
+        <TextView
+            android:id="@+id/tv_current_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_user"
+            android:layout_marginTop="@dimen/common_padding_more"
+            android:layout_toRightOf="@+id/iv_user"
+            android:text="360度咖啡馆"
+            android:textColor="@color/fragment_security_text_color"
+            android:textSize="@dimen/text_medium"/>
+
+        <TextView
+            android:id="@+id/tv_current_user_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_current_user"
+            android:layout_marginTop="@dimen/activity_text_space"
+            android:layout_toRightOf="@+id/iv_user"
+            android:text="账号：15988889999"
+            android:textColor="@color/fragment_security_text_color_notice"
+            android:textSize="@dimen/text_smaller"/>
+
+        <!--<ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/temp_item_arrow"/>-->
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/iv_one_key_wifi"
+            android:layout_toRightOf="@+id/iv_one_key_wifi"
+            android:background="@color/fragment_security_split"/>-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_binding_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_layout_space"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_binding_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/binding_phone_icon_1080p"/>
+
+        <TextView
+            android:id="@+id/tv_binding_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_binding_phone"
+            android:text="@string/activity_user_management_binding_phone"
+            android:textColor="@color/fragment_security_text_color"
+            android:textSize="@dimen/text_medium"/>
+
+        <!--<TextView
+            android:id="@+id/tv_wifi_problem_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tool_setting"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_setting"
+            android:text="系统查询附近可疑Wi-Fi热点信号"
+            android:textColor="@color/fragment_security_text_color_notice"
+            android:textSize="14sp"/>-->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_padding_more"
+            android:src="@drawable/temp_item_arrow"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_less"
+            android:layout_below="@+id/iv_binding_phone"
+            android:layout_toRightOf="@+id/iv_binding_phone"
+            android:background="@color/fragment_security_split"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_update_secret"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_update_secret"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/update_secret_icon_1080p"/>
+
+        <TextView
+            android:id="@+id/tv_update_secret"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_update_secret"
+            android:text="@string/activity_user_management_update_pwd"
+            android:textColor="@color/fragment_security_text_color"
+            android:textSize="@dimen/text_medium"/>
+
+        <!--<TextView
+            android:id="@+id/tv_wifi_problem_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tool_setting"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_setting"
+            android:text="系统查询附近可疑Wi-Fi热点信号"
+            android:textColor="@color/fragment_security_text_color_notice"
+            android:textSize="14sp"/>-->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_padding_more"
+            android:src="@drawable/temp_item_arrow"/>
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/iv_binding_phone"
+            android:layout_toRightOf="@+id/iv_binding_phone"
+            android:background="@color/fragment_security_split"/>-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_add_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_layout_space"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_add_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/add_user_icon_1080p"/>
+
+        <TextView
+            android:id="@+id/tv_add_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_add_user"
+            android:text="@string/activity_user_management_add_user"
+            android:textColor="@color/fragment_security_text_color"
+            android:textSize="@dimen/text_medium"/>
+
+        <!--<TextView
+            android:id="@+id/tv_wifi_problem_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tool_setting"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_setting"
+            android:text="系统查询附近可疑Wi-Fi热点信号"
+            android:textColor="@color/fragment_security_text_color_notice"
+            android:textSize="14sp"/>-->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_padding_more"
+            android:src="@drawable/temp_item_arrow"/>
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/iv_add_user"
+            android:layout_toRightOf="@+id/iv_add_user"
+            android:background="@color/fragment_security_split"/>-->
+    </RelativeLayout>
+
+</LinearLayout>

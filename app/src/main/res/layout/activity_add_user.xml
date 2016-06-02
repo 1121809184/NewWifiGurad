@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/user_phone_icon_1080p"/>
+
+        <EditText
+            android:id="@+id/et_user_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_phone"
+            android:layout_alignTop="@+id/iv_phone"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_phone"
+            android:background="@null"
+            android:hint="@string/activity_add_user_phone"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:textColor="@color/add_shop_text"
+            android:textColorHint="@color/add_shop_text_hint_color"
+            android:textSize="@dimen/text_small"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_more"
+            android:layout_below="@+id/iv_phone"
+            android:layout_toRightOf="@+id/iv_phone"
+            android:background="@color/fragment_security_split"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/common_padding_more"
+        android:paddingTop="@dimen/common_padding_more"
+        android:text="@string/activity_add_user_prompt"
+        android:textColor="@color/add_shop_text_hint_color"
+        android:textSize="@dimen/text_smaller"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_add_user_boss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/cb_add_boss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_padding_more"
+            android:background="@drawable/check_box_add_user"/>
+
+        <ImageView
+            android:id="@+id/iv_boss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/cb_add_boss"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/boss_icon_1080p"/>
+
+        <TextView
+            android:id="@+id/tv_add_boss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_boss"
+            android:layout_marginTop="@dimen/activity_add_user_margin_top"
+            android:layout_toRightOf="@+id/iv_boss"
+            android:text="@string/activity_add_user_boss"
+            android:textColor="@color/fragment_security_text_color"
+            android:textSize="@dimen/text_medium"/>
+
+        <TextView
+            android:id="@+id/tv_wifi_verify_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_add_boss"
+            android:layout_marginTop="@dimen/activity_add_user_text_space"
+            android:layout_toRightOf="@+id/iv_boss"
+            android:text="@string/activity_add_user_boss_summary"
+            android:textColor="@color/fragment_security_text_color_notice"
+            android:textSize="@dimen/text_smaller"/>
+
+        <!--<ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/temp_item_arrow"/>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_less"
+            android:layout_alignLeft="@+id/iv_boss"
+            android:layout_below="@+id/iv_boss"
+            android:layout_marginLeft="@dimen/common_padding_more"
+            android:background="@color/fragment_security_split"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_add_user_manager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/cb_add_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_padding_more"
+            android:background="@drawable/check_box_add_user"/>
+
+        <ImageView
+            android:id="@+id/iv_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/cb_add_manager"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/manager_icon_1080p"/>
+
+        <TextView
+            android:id="@+id/tv_add_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_manager"
+            android:layout_marginTop="@dimen/activity_add_user_margin_top"
+            android:layout_toRightOf="@+id/iv_manager"
+            android:text="@string/activity_add_user_manager"
+            android:textColor="@color/fragment_security_text_color"
+            android:textSize="@dimen/text_medium"/>
+
+        <TextView
+            android:id="@+id/tv_add_manager_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_add_manager"
+            android:layout_marginRight="@dimen/common_padding_more"
+            android:layout_marginTop="@dimen/activity_add_user_text_space"
+            android:layout_toRightOf="@+id/iv_manager"
+            android:text="@string/activity_add_user_manager_summary"
+            android:textColor="@color/fragment_security_text_color_notice"
+            android:textSize="@dimen/text_smaller"/>
+
+        <!--<ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/temp_item_arrow"/>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_less"
+            android:layout_alignLeft="@+id/iv_manager"
+            android:layout_below="@+id/iv_manager"
+            android:layout_marginLeft="@dimen/common_padding_more"
+            android:background="@color/fragment_security_split"/>
+    </RelativeLayout>
+
+    <!--<RelativeLayout
+        android:id="@+id/rl_add_user_emp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/cb_add_emp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_padding_more"
+            android:background="@drawable/check_box_add_user"/>
+
+        <ImageView
+            android:id="@+id/iv_emp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/cb_add_emp"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/emp_icon_1080p"/>
+
+        <TextView
+            android:id="@+id/tv_add_emp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_emp"
+            android:layout_marginTop="@dimen/activity_add_user_margin_top"
+            android:layout_toRightOf="@+id/iv_emp"
+            android:text="@string/activity_add_user_emp"
+            android:textColor="@color/fragment_security_text_color"
+            android:textSize="@dimen/text_medium"/>
+
+        <TextView
+            android:id="@+id/tv_add_emp_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_add_emp"
+            android:layout_marginRight="@dimen/common_padding_more"
+            android:layout_marginTop="@dimen/activity_add_user_text_space"
+            android:layout_toRightOf="@+id/iv_emp"
+            android:text="@string/activity_add_user_emp_summary"
+            android:textColor="@color/fragment_security_text_color_notice"
+            android:textSize="@dimen/text_smaller"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignLeft="@+id/iv_emp"
+            android:layout_below="@+id/iv_emp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/fragment_security_split"/>
+    </RelativeLayout>-->
+
+    <Button
+        android:id="@+id/btn_add_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_button_margin_left_right"
+        android:layout_marginRight="@dimen/common_button_margin_left_right"
+        android:layout_marginTop="@dimen/activity_login_btn_m_t"
+        android:background="@drawable/button_phone_binding_bg"
+        android:paddingBottom="@dimen/common_button_padding_bot_top"
+        android:paddingTop="@dimen/common_button_padding_bot_top"
+        android:text="@string/activity_phone_button_binding"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_small"/>
+</LinearLayout>

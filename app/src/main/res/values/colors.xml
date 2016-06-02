@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_holo_light">#fff3f3f3</color>
+    <color name="background_split">#dbdbdb</color>
+    <color name="theme_color">#2f8bfb</color>
+    <color name="theme_text_color">#5e5e5e</color>
+    <color name="theme_gray_bg">#f0f6f5</color>
+
+    <!--更多-->
+    <color name="more_dialog_text_color">#afbac2</color>
+    <color name="more_dialog_bg">#31373e</color>
+    <color name="more_dialog_split">#505b68</color>
+
+    <!--登录页按钮-->
+    <color name="button_login_weixin">#16B88C</color>
+    <color name="button_login_weibo">#f9aa5e</color>
+    <color name="et_login_hint">#9ac7ff</color>
+    <color name="et_login_split">#9ac7ff</color>
+    <color name="button_phone_register_disable">#9ac7ff</color>
+    <color name="button_phone_register_press">#1b5397</color>
+
+    <!--添加商户页按钮-->
+    <color name="add_shop_text_hint_color">#afbac2</color>
+    <color name="add_shop_split">#dbdbdb</color>
+    <color name="add_shop_text">#5e5e5e</color>
+
+    <!--绑定Wifi页-->
+    <color name="binding_wifi_text_color">#5e5e5e</color>
+    <color name="binding_wifi_text_bind_color">#afbac2</color>
+    <color name="binding_wifi_split">#dbdbdb</color>
+    <color name="binding_wifi_text_notice">#9ea9b2</color>
+    <color name="binding_wifi_bg">#f0f6f5</color>
+    <color name="input_pwd_notice">#b7c1c8</color>
+
+    <!--修改wifi页-->
+    <color name="update_shop_wifi_tag_text">#afbac2</color>
+    <color name="update_shop_wifi_tag_bg">#e8edf3</color>
+
+    <!--验证中心-->
+    <color name="verify_center_text_color">#5e5e5e</color>
+    <color name="verify_center_bg">#f0f6f5</color>
+    <color name="verify_center_text_notice">#9ea9b2</color>
+    <color name="verify_center_text_shop_wifi">#afbac2</color>
+
+    <!--wifi 110-->
+    <color name="police_notice_text_color">#9ea9b2</color>
+    <color name="police_notice_text_bg">#f0f6f5</color>
+    <color name="safe_check_red">#FB3F3F</color>
+    <color name="safe_check_red_pressed">#801a1a</color>
+
+    <!--修改商户-->
+    <color name="edit_shop_ap_text_color">#afbac2</color>
+    <color name="edit_shop_ap_text_bg">#e8edf3</color>
+
+    <!--fragment-security-->
+    <color name="fragment_security_text_color">#5e5e5e</color>
+    <color name="fragment_security_text_color_notice">#b7b7b7</color>
+    <color name="fragment_security_split">#dbdbdb</color>
+    <color name="fragment_data_text_top_color">#5e5e5e</color>
+    <color name="fragment_data_text_bot_color">#afbac2</color>
+    <color name="fragment_data_split_line">#dbdbdb</color>
+    <color name="fragment_security_checking_text_color">#accafd</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="translucent">#99000000</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="dark">#3D5562</color>
+    <color name="gray">#A7A7A7</color>
+    <color name="grey">#DADADA</color>
+    <color name="red">#F03131</color>
+    <color name="blue">#0099CC</color>
+    <color name="orange">#FF5600</color>
+    <color name="green">#669900</color>
+    <color name="purple">#AB17F8</color>
+    <color name="orange_light">#FF9900</color>
+
+    <color name="tab_indicator_text_color">#16B88C</color>
+    <color name="tab_layout_bg">#FBFBFB</color>
+    <color name="page_viewer_margin_color">#F0F0F0</color>
+
+    <color name="title_bar_bg">#16B88C</color>
+    <color name="title_bar_right_text_color">#FFFFFF</color>
+    <color name="line_bg">#DBDBDB</color>
+
+    <!-- For fragment  -->
+    <color name="fragment_bg">#F0F0F0</color>
+
+    <!-- For listview item -->
+    <color name="item_line_gray">#E0E0E0</color>
+
+    <!-- For button -->
+    <color name="button_orange_normal_bg">#FF5600</color>
+    <color name="button_orange_pressed_bg">#FF7337</color>
+    <color name="button_orange_disenabled_bg">#999999</color>
+
+    <color name="button_light_orange_normal_bg">#FF7337</color>
+    <color name="button_light_orange_pressed_bg">#FEBC5D</color>
+
+    <color name="button_green_normal_bg">#16B88C</color>
+    <color name="button_green_pressed_bg">#0D8161</color>
+    <color name="button_green_disenabled_bg">#999999</color>
+
+    <color name="label_blue_bg">#4E94F9</color>
+    <color name="label_blue_border">#0057A7</color>
+    <color name="label_green_bg">#44F045</color>
+    <color name="label_green_border">#019509</color>
+
+    <color name="label_common_wifi">#00a0e9</color>
+    <color name="label_vip_wifi">#4cd764</color>
+    <color name="label_wifi_ssid">#282828</color>
+
+    <color name="button_red_text_color">#DA363E</color>
+    <color name="button_connect_text_color">#135986</color>
+
+    <color name="button_bar_orange">#FCA120</color>
+    <color name="button_bar_green">#16B88C</color>
+    <color name="button_bar_half_green">#8016B88C</color>
+    <color name="button_bar_bg">#F8F9F7</color>
+
+    <color name="feedback_bg">#F5F5F5</color>
+    <color name="feedback_input_view_bg">#DBDBDB</color>
+    <color name="feedback_text_color">#A3ABA9</color>
+    <color name="feedback_text_color_bg">#50A3ABA9</color>
+</resources>
+

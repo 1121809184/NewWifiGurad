@@ -1,0 +1,8 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="oval">
+    <solid android:color="@color/theme_color"/>
+
+    <size
+        android:width="@dimen/activity_sus_wifi_blue_shap_w_h"
+        android:height="@dimen/activity_sus_wifi_blue_shap_w_h"/>
+</shape>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:background="@color/theme_gray_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_sys_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_more"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_account_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/common_padding_more"
+            android:layout_toRightOf="@+id/iv_sys_setting"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_settings_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="账号：13000000000"
+                android:textColor="@color/fragment_security_text_color"
+                android:textSize="@dimen/text_medium"/>
+
+            <TextView
+                android:id="@+id/tv_settings_user_shop_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fragment_security_text_space"
+                tools:text="拥有5个商铺，5个Wi-Fi AP"
+                android:textColor="@color/fragment_security_text_color_notice"
+                android:textSize="@dimen/text_smallest"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_settings_version_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_more"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_settings_version_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/icon_settings_version_check_1080p"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_settings_version_check"
+            android:text="@string/fragment_security_system_setting_version_check"
+            android:textColor="@color/fragment_security_text_color"
+            android:textSize="@dimen/text_medium"/>
+
+        <TextView
+            android:id="@+id/tv_settings_version_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_padding_more"
+            android:text="当前已是最新版本"
+            android:visibility="invisible"
+            android:textColor="@color/fragment_security_text_color_notice"
+            android:textSize="@dimen/text_smallest"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/iv_settings_version_check"
+            android:layout_marginLeft="@dimen/common_padding_more"
+            android:background="@color/fragment_security_split"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_settings_modify_passwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_setting_modify_passwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/common_padding_more"
+            android:src="@drawable/icon_settings_modify_pwd_1080p"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_setting_modify_passwd"
+            android:text="@string/fragment_security_system_setting_modify_pwd"
+            android:textColor="@color/fragment_security_text_color"
+            android:textSize="@dimen/text_medium"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_padding_more"
+            android:src="@drawable/temp_item_arrow"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_settings_quit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_more"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_settings_quit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding_more"
+            android:text="退出当前账号"
+            android:textColor="@color/fragment_security_text_color"
+            android:textSize="@dimen/text_medium"/>
+    </RelativeLayout>
+</LinearLayout>

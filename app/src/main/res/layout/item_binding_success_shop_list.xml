@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_shop_logo"
+        android:layout_width="128px"
+        android:layout_height="128px"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/shop_sys_logo" />
+
+    <LinearLayout
+        android:id="@+id/ll_shop_ap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_shop_logo"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_verify_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/verify_center_text_color"
+            android:textSize="@dimen/text_small"
+            tools:text="外商大酒店" />
+
+        <TextView
+            android:id="@+id/tv_verify_shop_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/verify_center_text_shop_wifi"
+            android:textSize="@dimen/text_smallest"
+            tools:text="已绑定2个WiFi热点" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btn_manage_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_verify_center_manage"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:text="管理"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_smaller" />
+
+        <TextView
+            android:id="@+id/tv_shop_update_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/verify_center_text_shop_wifi"
+            android:textSize="@dimen/text_smallest"
+            tools:text="3月21日17:00更新" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_less"
+        android:layout_below="@id/iv_shop_logo"
+        android:layout_marginLeft="15dp"
+        android:background="@color/binding_wifi_split" />
+</RelativeLayout>

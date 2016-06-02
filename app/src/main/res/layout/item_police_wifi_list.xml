@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_item_selector_bg">
+
+    <ImageView
+        android:id="@+id/iv_police_wifi_signal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_padding_more"
+        android:src="@drawable/wifi_blue3_icon_1080p"/>
+
+    <TextView
+        android:id="@+id/tv_police_wifi_ssid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_police_wifi_signal"
+        android:textColor="@color/binding_wifi_text_color"
+        android:textSize="@dimen/text_medium"
+        tools:text="TP_LINK_0809"/>
+
+    <ImageView
+        android:id="@+id/iv_police_wifi_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/common_padding_more"
+        android:src="@drawable/tick_icon_1080p"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_less"
+        android:layout_alignBottom="@id/iv_police_wifi_signal"
+        android:layout_marginLeft="@dimen/common_padding_more"
+        android:background="@color/binding_wifi_split"/>
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:background="@color/police_notice_text_bg">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/common_padding_more"
+            android:text="@string/activity_police_notice"
+            android:textColor="@color/police_notice_text_color"
+            android:textSize="@dimen/text_smaller"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_police_wifi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_police_call"
+        android:layout_below="@id/rl_notice"
+        android:divider="@null"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"/>
+
+    <Button
+        android:id="@+id/btn_police_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_button_margin_bot_top"
+        android:layout_marginLeft="@dimen/common_button_margin_left_right"
+        android:layout_marginRight="@dimen/common_button_margin_left_right"
+        android:layout_marginTop="@dimen/common_button_margin_bot_top"
+        android:background="@drawable/button_now_register_shop_bg"
+        android:paddingBottom="@dimen/common_button_padding_bot_top"
+        android:paddingTop="@dimen/common_button_padding_bot_top"
+        android:text="@string/activity_police_call"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_small"/>
+</RelativeLayout>

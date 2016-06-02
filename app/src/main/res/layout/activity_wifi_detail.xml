@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_gray_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_more"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_manager_shop_logo"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="@dimen/common_padding_more"
+            android:layout_marginRight="@dimen/common_padding_more"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/shop_sys_logo" />
+
+        <TextView
+            android:id="@+id/tv_manager_wifi_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/iv_manager_shop_logo"
+            android:textColor="@color/verify_center_text_color"
+            android:textSize="@dimen/text_medium"
+            tools:text="山东老家（珠江新城店）" />
+
+        <TextView
+            android:id="@+id/tv_manager_wifi_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_manager_wifi_shop_name"
+            android:layout_toRightOf="@+id/iv_manager_shop_logo"
+            android:singleLine="true"
+            android:textColor="@color/verify_center_text_shop_wifi"
+            android:textSize="@dimen/text_smallest"
+            tools:text="当前绑定2个Wi-Fi热点" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/common_padding_more"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <ListView
+            android:id="@+id/lv_my_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:id="@+id/ll_add_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_padding_more"
+                android:src="@drawable/shop_manager_add_shop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加新热点"
+                android:textColor="@color/verify_center_text_color"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

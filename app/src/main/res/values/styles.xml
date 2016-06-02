@@ -1,0 +1,28 @@
+<resources>
+
+    <style name="AppTheme" parent="@android:style/Theme.NoTitleBar">
+
+    </style>
+
+    <style name="CustomDialogAnimationStyle" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="@android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <style name="CustomDialogStyle" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="BigFontStyle">
+        <item name="android:textSize">@dimen/activity_scan_wifi_percent_text</item>
+    </style>
+
+    <style name="BlueFontStyle">
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+</resources>

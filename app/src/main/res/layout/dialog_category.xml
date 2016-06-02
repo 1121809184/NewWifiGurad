@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/common_padding_less"
+                android:paddingRight="@dimen/common_padding_less">
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_top_shape"
+        android:paddingBottom="@dimen/common_padding_less"
+        android:paddingLeft="@dimen/common_padding_less"
+        android:paddingTop="@dimen/common_padding_less"
+        android:singleLine="true"
+        android:text="@string/dialog_category_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_small"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_category_height"
+        android:layout_alignLeft="@id/tv_dialog_title"
+        android:layout_alignRight="@id/tv_dialog_title"
+        android:layout_below="@id/tv_dialog_title"
+        android:background="@drawable/dialog_bot_shape">
+
+        <ListView
+            android:id="@+id/lv_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"/>
+    </RelativeLayout>
+</RelativeLayout>
